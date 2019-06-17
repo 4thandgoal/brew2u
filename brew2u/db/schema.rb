@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_222108) do
+ActiveRecord::Schema.define(version: 2019_06_17_224054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,25 @@ ActiveRecord::Schema.define(version: 2019_06_17_222108) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "establishments", force: :cascade do |t|
+    t.bigint "admin_id"
+    t.string "company_name"
+    t.string "coffee_or_beer"
+    t.string "phone"
+    t.string "website"
+    t.string "street_1"
+    t.string "street_2"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.string "hours_of_operation"
+    t.boolean "pet_friendly"
+    t.boolean "wifi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_establishments_on_admin_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -56,4 +75,5 @@ ActiveRecord::Schema.define(version: 2019_06_17_222108) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "establishments", "admins"
 end
