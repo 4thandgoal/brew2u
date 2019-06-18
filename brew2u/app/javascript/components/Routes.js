@@ -6,10 +6,10 @@ class Routes extends Component {
     
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Switch>
         </Switch>
-      </div>
+      </React.Fragment>
     )
   }
 }
