@@ -31,40 +31,28 @@ class Routes extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar>
+        <Navbar color='light' light expand='md'>
           <NavbarBrand href="/">Brew2U</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="#">Page Link</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Another Page Link</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">One More Link</NavLink>
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Log In
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
+                    User Log In
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Vendor Log In
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
-        </NavBar>
+        </Navbar>
         <Switch>
         </Switch>
       </React.Fragment>
