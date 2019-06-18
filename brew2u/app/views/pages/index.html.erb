@@ -1,5 +1,8 @@
 <%= react_component('App', {
-    logged_in: user_signed_in?,
-    sign_in_route: new_user_session_path,
-    sign_out_route: destroy_user_session_path,
+    user_logged_in: user_signed_in?,
+    user_sign_in_route: new_user_session_path,
+    user_sign_out_route: destroy_user_session_path,
+    admin_logged_in: admin_signed_in?,
+    admin_sign_in_route: new_admin_session_path,
+    admin_sign_out_route: destroy_admin_session_path,
 } ) %>
