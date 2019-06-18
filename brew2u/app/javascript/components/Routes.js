@@ -15,9 +15,13 @@ import {
   DropdownItem } from 'reactstrap';
 
 class Routes extends Component {
-  constructor() {
-    super()
-  
+  constructor(props) {
+    super(props)
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      logged_in: false,
+      isOpen: false  
+    }
   }
   
   toggle() {
@@ -27,9 +31,47 @@ class Routes extends Component {
   }
     
   render() {
+    const { logged_in } = this.state
     return (
       <React.Fragment>
         <NavBar>
+          <NavbarBrand href="/">Brew2U</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#">Page Link</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Another Page Link</NavLink>
+              </NavItem>
+              <NavItem>
+                {!logged_in &&
+                  <NavLink href="#">Sign In</NavLink>
+                }
+                {logged_in &&
+                  <NavLink href="#">Sign Out</NavLink>
+                }
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Option 1
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
         </NavBar>
         <Switch>
         </Switch>
