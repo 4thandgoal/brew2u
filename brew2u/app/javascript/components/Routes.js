@@ -19,7 +19,6 @@ class Routes extends Component {
     super(props)
     this.toggle = this.toggle.bind(this);
     this.state = {
-      logged_in: false,
       isOpen: false  
     }
   }
@@ -31,7 +30,6 @@ class Routes extends Component {
   }
     
   render() {
-    const { logged_in } = this.state
     return (
       <React.Fragment>
         <NavBar>
@@ -44,14 +42,6 @@ class Routes extends Component {
               </NavItem>
               <NavItem>
                 <NavLink href="#">Another Page Link</NavLink>
-              </NavItem>
-              <NavItem>
-                {!logged_in &&
-                  <NavLink href="#">Sign In</NavLink>
-                }
-                {logged_in &&
-                  <NavLink href="#">Sign Out</NavLink>
-                }
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
