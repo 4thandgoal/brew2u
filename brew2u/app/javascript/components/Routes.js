@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import App from './App';
 import {
   Collapse,
   Navbar,
@@ -42,6 +41,9 @@ class Routes extends Component {
               </NavItem>
               <NavItem>
                 <NavLink href="#">Another Page Link</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">One More Link</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
