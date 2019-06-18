@@ -25,7 +25,9 @@ class EstablishmentsController < ApplicationController
     end
     
     private
+    
     def establishment_params
-        params.require(:establishment).permit(admin_id, company_name)
+        params.require(:establishment).permit(:company_name, :coffee_or_beer, :phone, :website, :street_1, :street_2, :city, :state, :zip, :hours_of_operation, 
+        :pet_friendly, :wifi)
     end
 end
