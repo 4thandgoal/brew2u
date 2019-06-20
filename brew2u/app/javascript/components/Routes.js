@@ -58,12 +58,34 @@ class Routes extends Component {
         </Switch>
          <div>
             <Nav vertical>
-              <NavItem>
-                <NavLink href="#">Coffee Shops</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Breweries</NavLink>
-              </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+             <DropdownToggle nav caret>
+                  Coffe Shops
+                </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                   Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+                </UncontrolledDropdown>
+              <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                  Breweries
+                </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                   Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+                </UncontrolledDropdown>
               <NavItem>
                 <NavLink href="#">Another Link</NavLink>
               </NavItem>
