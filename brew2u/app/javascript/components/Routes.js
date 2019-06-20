@@ -58,12 +58,12 @@ class Routes extends Component {
                 <li class="nav-home">Home</li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <i class="nav-icon cui-speedometer"></i> Coffee
+                    <i class="nav-icon cui-speedometer"></i> Coffee Shops
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <i class="nav-icon cui-speedometer"></i> Beer
+                    <i class="nav-icon cui-speedometer"></i> Breweries
                   </a>
                 </li>
               </ul>  
