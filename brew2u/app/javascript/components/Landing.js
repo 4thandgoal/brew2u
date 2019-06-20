@@ -56,7 +56,7 @@ class Sliders extends Component {
     this.onExited = this.onExited.bind(this);
   }
   
-    onExiting() {
+  onExiting() {
     this.animating = true;
   }
 
