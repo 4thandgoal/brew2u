@@ -28,6 +28,7 @@
   "jest": {
     "roots": [
       "test/javascript"
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
   }
 }
