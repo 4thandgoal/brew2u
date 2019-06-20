@@ -52,6 +52,24 @@ class Routes extends Component {
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
+          <div class="sidebar">
+            <nav class="sidebar-nav">
+              <ul class="nav">
+                <li class="nav-home">Home</li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon cui-speedometer"></i> Coffee
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon cui-speedometer"></i> Beer
+                  </a>
+                </li>
+              </ul>  
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+          </div>
         </Navbar>
         <Switch>
         </Switch>
