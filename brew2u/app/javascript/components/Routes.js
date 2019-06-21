@@ -41,12 +41,12 @@ class Routes extends Component {
     
   render() {
     const{ 
-      user_logged_in,
-      admin_logged_in,
-      user_sign_in_route,
-      user_sign_out_route,
-      admin_sign_in_route,
-      admin_sign_out_route
+      userLoggedIn,
+      userSignInRoute,
+      userSignOutRoute,
+      adminLoggedIn,
+      adminSignInRoute,
+      adminSignOutRoute
     } = this.props
     return (
       <React.Fragment>
@@ -60,20 +60,20 @@ class Routes extends Component {
                   Log In
                 </DropdownToggle>
                 <DropdownMenu right>
-                  {user_logged_in &&
+                  {userLoggedIn &&
                     <DropdownItem href='#users/sign_in'>User Logout
                     </DropdownItem> 
                   }
-                  {!user_logged_in && 
+                  {!userLoggedIn && 
                     <DropdownItem href='#users/sign_in'>User Login
                     </DropdownItem>
                   }
                 <DropdownItem divider />
-                  {admin_logged_in &&
+                  {adminLoggedIn &&
                     <DropdownItem href='#admins/sign_in'>Vendor Logout
                     </DropdownItem> 
                   }
-                  {!admin_logged_in && 
+                  {!adminLoggedIn && 
                     <DropdownItem href='#admins/sign_in'>Vendor Login
                     </DropdownItem>
                   }
@@ -109,9 +109,9 @@ class Routes extends Component {
               render={
                 (props) =>
                 <UserSignIn
-                  user_logged_in={ user_logged_in }
-                  user_sign_in_route={ user_sign_in_route }
-                  user_sign_out_route={ user_sign_out_route }
+                  userLoggedIn={ userLoggedIn }
+                  userSignInRoute={ userSignInRoute }
+                  userSignOutRoute={ userSignOutRoute }
                 />
               }
             />
@@ -120,9 +120,9 @@ class Routes extends Component {
               render={
                 (props) =>
                 <AdminSignIn
-                  admin_logged_in={ admin_logged_in }
-                  admin_sign_in_route={ admin_sign_in_route }
-                  admin_sign_out_route={ admin_sign_out_route }
+                  adminLoggedIn={ adminLoggedIn }
+                  adminSignInRoute={ adminSignInRoute }
+                  adminSignOutRoute={ adminSignOutRoute }
                 />
               }
             />
