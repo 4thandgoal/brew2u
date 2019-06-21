@@ -15,6 +15,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
   
+
 //Routes
 import Beer from "./Beer";
 import Coffee from "./Coffee";
@@ -124,6 +125,41 @@ class Routes extends Component {
               }
             />
         </Switch>
+         <div>
+            <Nav vertical>
+            <UncontrolledDropdown nav inNavbar>
+             <DropdownToggle nav caret>
+                  Coffee Shops
+                </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                   Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+                </UncontrolledDropdown>
+              <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                  Breweries
+                </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                   Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+                </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="#">Another Link</NavLink>
+              </NavItem>
+            </Nav>
+          </div>
       </React.Fragment>
     )
   }
