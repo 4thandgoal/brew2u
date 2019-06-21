@@ -23,6 +23,7 @@ class BestBeer extends React.Component {
     }
     return (
       <React.Fragment>
+        { highestRatedBeer }
       </React.Fragment>
     );
   }

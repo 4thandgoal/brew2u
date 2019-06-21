@@ -28,6 +28,7 @@ class BestCoffee extends React.Component {
     }
     return (
       <React.Fragment>
+        { highestRatedCoffee }
       </React.Fragment>
     );
   }

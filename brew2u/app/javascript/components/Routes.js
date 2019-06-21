@@ -17,8 +17,8 @@ import {
   
 
 //Routes
-import Beer from "./Beer";
-import Coffee from "./Coffee";
+import BestBeer from "./BestBeer";
+import BestCoffee from "./BestCoffee";
 import Landing from "./Landing";
 
 
@@ -27,7 +27,9 @@ class Routes extends Component {
     super(props)
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false  
+      isOpen: false,
+      beers: [],
+      coffees: []
     }
   }
   
