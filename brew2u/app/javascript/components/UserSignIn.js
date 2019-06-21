@@ -15,7 +15,7 @@ class UserSignIn extends React.Component {
         
         {!user_logged_in &&
           <div>
-            <h5>You aren't signed in! Please sign in to join our Brew2U community.</h5>
+            <h5>You are not signed in! Please sign in to join our Brew2U community.</h5>
             <a href={ user_sign_in_route }>Sign In</a>
           </div>
         }

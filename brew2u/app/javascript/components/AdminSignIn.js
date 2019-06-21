@@ -14,7 +14,7 @@ class AdminSignIn extends React.Component {
         
         {!admin_logged_in &&
           <div>
-            <h5>You aren't signed in! Please sign in to register your business.</h5>
+            <h5>You are not signed in! Please sign in to register your business.</h5>
             <a href={ admin_sign_in_route }>Sign In</a>
           </div>
         }
