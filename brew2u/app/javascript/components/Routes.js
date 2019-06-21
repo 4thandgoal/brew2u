@@ -15,10 +15,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
   
-//Routes
-import Beer from "./Beer";
-import Coffee from "./Coffee";
-import Landing from "./Landing";
+
 
 
 class Routes extends Component {
