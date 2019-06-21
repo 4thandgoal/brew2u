@@ -20,4 +20,4 @@ class BestCoffee extends React.Component {
   }
 }
 
-export default Coffee
+export default BestCoffee
