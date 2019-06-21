@@ -60,7 +60,7 @@ class Routes extends Component {
             <Nav vertical>
             <UncontrolledDropdown nav inNavbar>
              <DropdownToggle nav caret>
-                  Coffe Shops
+                  Coffee Shops
                 </DropdownToggle>
                 <DropdownMenu >
                   <DropdownItem>
