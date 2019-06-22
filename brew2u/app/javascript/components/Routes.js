@@ -89,6 +89,44 @@ class Routes extends Component {
             </Nav>
           </Collapse>
         </Navbar>
+        <div>
+          <Nav vertical>
+            <UncontrolledDropdown nav inNavbar>
+             <DropdownToggle nav caret>
+                  Coffee Shops
+              </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                   Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                  Breweries
+              </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                   Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="#bestbeer">Beer</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#bestcoffee">Coffee</NavLink>
+              </NavItem>
+            </Nav>
+          </div>
         <Switch>
             <Route exact path='/' component={ Landing } />
             <Route
@@ -134,44 +172,6 @@ class Routes extends Component {
               }
             />
         </Switch>
-         <div>
-            <Nav vertical>
-            <UncontrolledDropdown nav inNavbar>
-             <DropdownToggle nav caret>
-                  Coffee Shops
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Top Rated
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                   Near Me
-                  </DropdownItem>
-                </DropdownMenu>
-                </UncontrolledDropdown>
-              <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                  Breweries
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Top Rated
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                   Near Me
-                  </DropdownItem>
-                </DropdownMenu>
-                </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="#bestbeer">Beer</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#bestcoffee">Coffee</NavLink>
-              </NavItem>
-            </Nav>
-          </div>
       </React.Fragment>
     )
   }
