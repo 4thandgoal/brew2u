@@ -28,8 +28,7 @@ class Routes extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      beers: [],
-      coffees: []
+      establishments: []
     }
   }
   
@@ -38,8 +37,16 @@ class Routes extends Component {
       isOpen: !this.state.isOpen
     })
   }
+  
+  componentDidMount = () => {
+    const { establishments } = this.state
+    fetch('/establishments.json')
+      .then(response => { return response.json() })
+      .then(data => { this.setState({ establishments: data }) })
+  }
     
   render() {
+    const { establishments } = this.state
     const{ 
       userLoggedIn,
       userSignInRoute,
@@ -85,21 +92,21 @@ class Routes extends Component {
         <Switch>
             <Route exact path='/' component={ Landing } />
             <Route
-              path='/beer'
+              path='/bestbeer'
               render={
                 (props) =>
-                <Beer
-                  beer={ beer }
+                <BestBeer
+                  establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
               }
             />
             <Route
-              path='/coffee'
+              path='/bestcoffee'
               render={
                 (props) =>
-                <Coffee
-                  coffee={ coffee }
+                <BestCoffee
+                  establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
               }
@@ -158,7 +165,10 @@ class Routes extends Component {
                 </DropdownMenu>
                 </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="#">Another Link</NavLink>
+                <NavLink href="#bestbeer">Beer</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#bestcoffee">Coffee</NavLink>
               </NavItem>
             </Nav>
           </div>
