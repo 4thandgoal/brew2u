@@ -93,7 +93,7 @@ class Routes extends Component {
           <Nav vertical>
             <UncontrolledDropdown nav inNavbar>
              <DropdownToggle nav caret>
-                  Coffee Shops
+                Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
                   <DropdownItem>
@@ -101,13 +101,13 @@ class Routes extends Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                   Near Me
+                    Near Me
                   </DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                  Breweries
+                Breweries
               </DropdownToggle>
                 <DropdownMenu >
                   <DropdownItem>
@@ -115,7 +115,7 @@ class Routes extends Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                   Near Me
+                    Near Me
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -125,8 +125,8 @@ class Routes extends Component {
               <NavItem>
                 <NavLink href="#bestcoffee">Coffee</NavLink>
               </NavItem>
-            </Nav>
-          </div>
+          </Nav>
+        </div>
         <Switch>
             <Route exact path='/' component={ Landing } />
             <Route
