@@ -20,7 +20,7 @@ import {
 import BestBeer from "./BestBeer";
 import BestCoffee from "./BestCoffee";
 import Landing from "./Landing";
-
+import NewEstablishment from "./NewEstablishment"
 
 class Routes extends Component {
   constructor(props) {
@@ -44,6 +44,19 @@ class Routes extends Component {
       .then(response => { return response.json() })
       .then(data => { this.setState({ establishments: data }) })
   }
+  
+  handleNewEstablishment = (newEstablishmentInfo) => {
+    return fetch("/establishments.json", {
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(newEstablishmentInfo)
+    })
+    .then(resp => {
+      let json = resp.json()
+      return json
+    })
     
   render() {
     const { establishments } = this.state
@@ -148,6 +161,10 @@ class Routes extends Component {
                   componentDidMount={ this.componentDidMount }
                 />
               }
+            />
+            <Route 
+              path="/newestablishment"
+              render={(props)=><NewEstablishment handleNewEstablishment={this.handleNewEstablishment} />}
             />
             <Route
               path='/users/sign_in'
