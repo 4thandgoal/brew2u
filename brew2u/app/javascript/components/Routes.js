@@ -28,8 +28,7 @@ class Routes extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      beers: [],
-      coffees: []
+      establishments: []
     }
   }
   
@@ -37,6 +36,13 @@ class Routes extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     })
+  }
+  
+  componentDidMount = () => {
+    const { establishments } = this.state
+    fetch('/establishments.json')
+      .then(response => { return response.json() })
+      .then(data => { this.setState({ establishments: data }) })
   }
   
   handleNewEstablishment = (newEstablishmentInfo) => {
@@ -51,9 +57,9 @@ class Routes extends Component {
       let json = resp.json()
       return json
     })
-  }
     
   render() {
+    const { establishments } = this.state
     const{ 
       userLoggedIn,
       userSignInRoute,
@@ -96,24 +102,62 @@ class Routes extends Component {
             </Nav>
           </Collapse>
         </Navbar>
+        <div>
+          <Nav vertical>
+            <UncontrolledDropdown nav inNavbar>
+             <DropdownToggle nav caret>
+                Coffee Shops
+              </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Breweries
+              </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    Top Rated
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Near Me
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="#bestbeer">Beer</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#bestcoffee">Coffee</NavLink>
+              </NavItem>
+          </Nav>
+        </div>
         <Switch>
             <Route exact path='/' component={ Landing } />
             <Route
-              path='/beer'
+              path='/bestbeer'
               render={
                 (props) =>
-                <Beer
-                  beer={ beer }
+                <BestBeer
+                  establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
               }
             />
             <Route
-              path='/coffee'
+              path='/bestcoffee'
               render={
                 (props) =>
-                <Coffee
-                  coffee={ coffee }
+                <BestCoffee
+                  establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
               }
@@ -145,41 +189,6 @@ class Routes extends Component {
               }
             />
         </Switch>
-         <div>
-            <Nav vertical>
-            <UncontrolledDropdown nav inNavbar>
-             <DropdownToggle nav caret>
-                  Coffee Shops
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Top Rated
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                   Near Me
-                  </DropdownItem>
-                </DropdownMenu>
-                </UncontrolledDropdown>
-              <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                  Breweries
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Top Rated
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                   Near Me
-                  </DropdownItem>
-                </DropdownMenu>
-                </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="#">Another Link</NavLink>
-              </NavItem>
-            </Nav>
-          </div>
       </React.Fragment>
     )
   }
