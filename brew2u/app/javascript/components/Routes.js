@@ -20,7 +20,7 @@ import {
 import BestBeer from "./BestBeer";
 import BestCoffee from "./BestCoffee";
 import Landing from "./Landing";
-
+import NewEstablishment from "./NewEstablishment"
 
 class Routes extends Component {
   constructor(props) {
@@ -46,7 +46,8 @@ class Routes extends Component {
       userSignOutRoute,
       adminLoggedIn,
       adminSignInRoute,
-      adminSignOutRoute
+      adminSignOutRoute,
+      handleNewEstablishment
     } = this.props
     return (
       <React.Fragment>
@@ -103,6 +104,10 @@ class Routes extends Component {
                   componentDidMount={ this.componentDidMount }
                 />
               }
+            />
+            <Route 
+              exact path="/establishments"
+              render={(props)=><NewEstablishment {...props} handleNewEstablishment={handleNewEstablishment} />}
             />
             <Route
               path='/users/sign_in'
