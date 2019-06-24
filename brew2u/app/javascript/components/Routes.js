@@ -57,10 +57,11 @@ class Routes extends Component {
       let json = resp.json()
       return json
     })
+  }
     
   render() {
     const { establishments } = this.state
-    const{ 
+    const { 
       userLoggedIn,
       userSignInRoute,
       userSignOutRoute,
