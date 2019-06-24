@@ -21,10 +21,10 @@ class NewEstablishment extends React.Component {
         state: '',
         zip: '',
         hours_of_operation: '',
-        pet_friendly: '',
-        wifi: ''
+        pet_friendly: true,
+        wifi: true
       },
-      createSuccess: false
+      success: false
     }
     this.state = this.initialState
   }
@@ -36,26 +36,18 @@ class NewEstablishment extends React.Component {
     this.setState({ attributes })
   }
   
-  newEstablishment = ()=>{
-    const{ handleNewEstablishment } = this.props
-    const{ attributes } = this.state
-    handleNewEstablishment(attributes)
-    .then(()=>{
-      const newState = this.initialState 
-      newState.createSuccess = true
-      this.setState(newState)
-    })
-    //we would need to handle error situations here
-    //like showing validation errors
+  handleNewEstablishment = () => {
+    const { success } = this.state
+    const { handleNewEstablishment } = this.props
+    handleNewEstablishment(this.state.attributes)
+    let redirect = success === false ? true : false
+    this.setState({ success: redirect })
   }
   
     render () {
-    const{ createSuccess, attributes } = this.state
+    const{ success, attributes } = this.state
     return (
       <React.Fragment>
-        {createSuccess &&
-          <Redirect to="/" />
-        }
         <h1>New Establishment</h1>
         <FormGroup>
           <Label for="company_name">Company Name</Label>
@@ -69,11 +61,14 @@ class NewEstablishment extends React.Component {
         <FormGroup>
           <Label for="coffee_or_beer">Coffee or Beer</Label>
           <Input 
-            type="text" 
+            type="select" 
             name="coffee_or_beer"
             onChange={this.handleChange}
             value = {attributes.coffee_or_beer}
-          />
+          >
+            <option>Coffee</option>
+            <option>Beer</option>
+          </Input>
         </FormGroup>
         <FormGroup>
           <Label for="phone">Phone Number</Label>
@@ -155,8 +150,8 @@ class NewEstablishment extends React.Component {
             onChange={this.handleChange}
             value = {attributes.pet_friendly}
           >
-            <option>True</option>
-            <option>False</option>
+            <option>true</option>
+            <option>false</option>
           </Input>
         </FormGroup>
         <FormGroup>
@@ -167,13 +162,16 @@ class NewEstablishment extends React.Component {
             onChange={this.handleChange}
             value = {attributes.wifi}
           >
-            <option>True</option>
-            <option>False</option>
+            <option>true</option>
+            <option>false</option>
           </Input>
         </FormGroup>
 
-        <Button onClick={this.newEstablishment}> Save</Button>
+        <Button onClick={this.handleNewEstablishment}> Save</Button>
         <Link to='/establishments' className='btn btn-warning'> Cancel</Link>
+        {success &&
+          <Redirect to="/" />
+        }
       </React.Fragment>
     );
   }

@@ -1,7 +1,7 @@
 class EstablishmentsController < ApplicationController
     # protect all establishment routes
     before_action :set_establishment, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     
     def index
         establishments = Establishment.all

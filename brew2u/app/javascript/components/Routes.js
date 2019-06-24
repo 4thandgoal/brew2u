@@ -38,6 +38,20 @@ class Routes extends Component {
       isOpen: !this.state.isOpen
     })
   }
+  
+  handleNewEstablishment = (newEstablishmentInfo) => {
+    return fetch("/establishments.json", {
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(newEstablishmentInfo)
+    })
+    .then(resp => {
+      let json = resp.json()
+      return json
+    })
+  }
     
   render() {
     const{ 
@@ -46,8 +60,7 @@ class Routes extends Component {
       userSignOutRoute,
       adminLoggedIn,
       adminSignInRoute,
-      adminSignOutRoute,
-      handleNewEstablishment
+      adminSignOutRoute
     } = this.props
     return (
       <React.Fragment>
@@ -106,8 +119,8 @@ class Routes extends Component {
               }
             />
             <Route 
-              exact path="/establishments"
-              render={(props)=><NewEstablishment {...props} handleNewEstablishment={handleNewEstablishment} />}
+              path="/newestablishment"
+              render={(props)=><NewEstablishment handleNewEstablishment={this.handleNewEstablishment} />}
             />
             <Route
               path='/users/sign_in'
