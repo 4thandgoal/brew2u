@@ -35,6 +35,12 @@ admin = Admin.create(
         city: Faker::Address.city,
         state: Faker::Address.state,
         zip: Faker::Address.zip_code
-    })    
+    }) 
+    
+review = Review.create(
+    {
+        rating: 3,
+        review: "The coffee is really strong and bitter."
+    })   
 end
      

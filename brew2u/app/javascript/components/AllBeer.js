@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
+import SingleShop from "./SingleShop"
 
-class BestBeer extends React.Component {
+class AllBeer extends React.Component {
   render () {
     const { establishments } = this.props
     const highestRatedBeer = () => {
@@ -35,4 +36,4 @@ class BestBeer extends React.Component {
   }
 }
 
-export default BestBeer
+export default AllBeer
