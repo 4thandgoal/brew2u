@@ -17,10 +17,11 @@ import {
   
 
 //Routes
-import BestBeer from "./BestBeer";
-import BestCoffee from "./BestCoffee";
+import AllBeer from "./AllBeer";
+import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
 import NewEstablishment from "./NewEstablishment"
+import SingleShop from "./SingleShop"
 
 class Routes extends Component {
   constructor(props) {
@@ -58,6 +59,7 @@ class Routes extends Component {
       return json
     })
   }
+  
     
   render() {
     const { establishments } = this.state
@@ -134,30 +136,30 @@ class Routes extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="#bestbeer">Beer</NavLink>
+                <NavLink href="#allbeer">Beer</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#bestcoffee">Coffee</NavLink>
+                <NavLink href="#allcoffee">Coffee</NavLink>
               </NavItem>
           </Nav>
         </div>
         <Switch>
             <Route exact path='/' component={ Landing } />
             <Route
-              path='/bestbeer'
+              path='/allbeer'
               render={
                 (props) =>
-                <BestBeer
+                <AllBeer
                   establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
               }
             />
             <Route
-              path='/bestcoffee'
+              path='/allcoffee'
               render={
                 (props) =>
-                <BestCoffee
+                <AllCoffee
                   establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
@@ -165,7 +167,21 @@ class Routes extends Component {
             />
             <Route 
               path="/newestablishment"
-              render={(props)=><NewEstablishment handleNewEstablishment={this.handleNewEstablishment} />}
+              render={
+                (props)=>
+                <NewEstablishment
+                  handleNewEstablishment={this.handleNewEstablishment}
+                />
+              }
+            />
+            <Route
+              path="/singleshop/:id"
+              render={
+                (props) =>
+                <SingleShop
+                  establishments={ establishments }
+                />
+              }
             />
             <Route
               path='/users/sign_in'
