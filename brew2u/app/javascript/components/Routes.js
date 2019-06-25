@@ -20,7 +20,8 @@ import {
 import BestBeer from "./BestBeer";
 import BestCoffee from "./BestCoffee";
 import Landing from "./Landing";
-import NewEstablishment from "./NewEstablishment"
+import NewEstablishment from "./NewEstablishment";
+import MapContainer from "./MapContainer"
 
 class Routes extends Component {
   constructor(props) {
@@ -166,6 +167,9 @@ class Routes extends Component {
             <Route 
               path="/newestablishment"
               render={(props)=><NewEstablishment handleNewEstablishment={this.handleNewEstablishment} />}
+            />
+            <Route
+              path="/map" component = { MapContainer }
             />
             <Route
               path='/users/sign_in'
