@@ -22,6 +22,7 @@ import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
+import SingleShop from "./SingleShop"
 
 class Routes extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ class Routes extends Component {
       return json
     })
   }
-  
+
   handleNewReview = (newReviewInfo) => {
     return fetch("/reviews.json", {
       headers:{
@@ -187,7 +188,21 @@ class Routes extends Component {
             />
             <Route 
               path="/newestablishment"
-              render={(props)=><NewEstablishment handleNewEstablishment={this.handleNewEstablishment} />}
+              render={
+                (props)=>
+                <NewEstablishment
+                  handleNewEstablishment={this.handleNewEstablishment}
+                />
+              }
+            />
+            <Route
+              path="/singleshop/:id"
+              render={
+                (props) =>
+                <SingleShop
+                  establishments={ establishments }
+                />
+              }
             />
             <Route 
               path="/newreview"

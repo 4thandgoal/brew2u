@@ -8,6 +8,10 @@ class EstablishmentsController < ApplicationController
         render json: establishments, status: 200
     end
     
+    def show
+        
+    end
+    
     def create
         establishment = current_admin.establishments.new(establishment_params)
         if establishment.save
