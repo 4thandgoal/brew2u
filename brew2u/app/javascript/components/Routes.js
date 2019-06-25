@@ -21,6 +21,7 @@ import AllBeer from "./AllBeer";
 import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
 import NewEstablishment from "./NewEstablishment"
+import NewReview from "./NewReview"
 import SingleShop from "./SingleShop"
 
 class Routes extends Component {
@@ -29,7 +30,8 @@ class Routes extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      establishments: []
+      establishments: [],
+      reviews: []
     }
   }
   
@@ -46,6 +48,12 @@ class Routes extends Component {
       .then(data => { this.setState({ establishments: data }) })
   }
   
+  componentDidMount = () => {
+    const { reviews } = this.state
+    fetch('/reviews.json')
+      .then(response => { return response.json() })
+      .then(data => { this.setState({ reviews: data }) })
+  }
   handleNewEstablishment = (newEstablishmentInfo) => {
     return fetch("/establishments.json", {
       headers:{
@@ -59,10 +67,23 @@ class Routes extends Component {
       return json
     })
   }
-  
+
+  handleNewReview = (newReviewInfo) => {
+    return fetch("/reviews.json", {
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(newReviewInfo)
+    })
+    .then(resp => {
+      let json = resp.json()
+      return json
+    })
+  } 
     
   render() {
-    const { establishments } = this.state
+    const { establishments, reviews } = this.state
     const { 
       userLoggedIn,
       userSignInRoute,
@@ -180,6 +201,15 @@ class Routes extends Component {
                 (props) =>
                 <SingleShop
                   establishments={ establishments }
+                />
+              }
+            />
+            <Route 
+              path="/newreview"
+              render={
+                (props)=>
+                <NewReview
+                  handleNewReview={this.handleNewReview}
                 />
               }
             />
