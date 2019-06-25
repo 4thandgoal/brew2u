@@ -14,6 +14,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+import banner from './brew2ulogo.png'
   
 
 //Routes
@@ -95,7 +96,7 @@ class Routes extends Component {
     return (
       <React.Fragment>
         <Navbar color='light' light expand='md'>
-          <NavbarBrand href="/">Brew2U</NavbarBrand>
+          <NavbarBrand href="/"><img className="logo" src={banner} alt="brew2u logo" /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -236,6 +237,10 @@ class Routes extends Component {
               }
             />
         </Switch>
+        <footer>
+          <p>Brew2U</p>
+          <p>&copy; 4th & Goal 2019</p>
+        </footer>
       </React.Fragment>
     )
   }
