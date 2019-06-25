@@ -14,14 +14,17 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+import banner from './brew2ulogo.png'
   
 
 //Routes
-import BestBeer from "./BestBeer";
-import BestCoffee from "./BestCoffee";
+import AllBeer from "./AllBeer";
+import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
-import NewEstablishment from "./NewEstablishment";
 import MapContainer from "./MapContainer"
+import NewEstablishment from "./NewEstablishment"
+import NewReview from "./NewReview"
+import SingleShop from "./SingleShop"
 
 class Routes extends Component {
   constructor(props) {
@@ -29,7 +32,8 @@ class Routes extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      establishments: []
+      establishments: [],
+      reviews: []
     }
   }
   
@@ -46,6 +50,12 @@ class Routes extends Component {
       .then(data => { this.setState({ establishments: data }) })
   }
   
+  componentDidMount = () => {
+    const { reviews } = this.state
+    fetch('/reviews.json')
+      .then(response => { return response.json() })
+      .then(data => { this.setState({ reviews: data }) })
+  }
   handleNewEstablishment = (newEstablishmentInfo) => {
     return fetch("/establishments.json", {
       headers:{
@@ -59,9 +69,23 @@ class Routes extends Component {
       return json
     })
   }
+
+  handleNewReview = (newReviewInfo) => {
+    return fetch("/reviews.json", {
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(newReviewInfo)
+    })
+    .then(resp => {
+      let json = resp.json()
+      return json
+    })
+  } 
     
   render() {
-    const { establishments } = this.state
+    const { establishments, reviews } = this.state
     const { 
       userLoggedIn,
       userSignInRoute,
@@ -73,7 +97,7 @@ class Routes extends Component {
     return (
       <React.Fragment>
         <Navbar color='light' light expand='md'>
-          <NavbarBrand href="/">Brew2U</NavbarBrand>
+          <NavbarBrand href="/"><img className="logo" src={banner} alt="brew2u logo" /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -135,30 +159,30 @@ class Routes extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="#bestbeer">Beer</NavLink>
+                <NavLink href="#allbeer">Beer</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#bestcoffee">Coffee</NavLink>
+                <NavLink href="#allcoffee">Coffee</NavLink>
               </NavItem>
           </Nav>
         </div>
         <Switch>
             <Route exact path='/' component={ Landing } />
             <Route
-              path='/bestbeer'
+              path='/allbeer'
               render={
                 (props) =>
-                <BestBeer
+                <AllBeer
                   establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
               }
             />
             <Route
-              path='/bestcoffee'
+              path='/allcoffee'
               render={
                 (props) =>
-                <BestCoffee
+                <AllCoffee
                   establishments={ establishments }
                   componentDidMount={ this.componentDidMount }
                 />
@@ -166,7 +190,30 @@ class Routes extends Component {
             />
             <Route 
               path="/newestablishment"
-              render={(props)=><NewEstablishment handleNewEstablishment={this.handleNewEstablishment} />}
+              render={
+                (props)=>
+                <NewEstablishment
+                  handleNewEstablishment={this.handleNewEstablishment}
+                />
+              }
+            />
+            <Route
+              path="/singleshop/:id"
+              render={
+                (props) =>
+                <SingleShop
+                  establishments={ establishments }
+                />
+              }
+            />
+            <Route 
+              path="/newreview"
+              render={
+                (props)=>
+                <NewReview
+                  handleNewReview={this.handleNewReview}
+                />
+              }
             />
             <Route
               path="/map" component = { MapContainer }
@@ -194,6 +241,10 @@ class Routes extends Component {
               }
             />
         </Switch>
+        <footer>
+          <p>Brew2U</p>
+          <p>&copy; 4th & Goal 2019</p>
+        </footer>
       </React.Fragment>
     )
   }

@@ -167,8 +167,8 @@ class NewEstablishment extends React.Component {
           </Input>
         </FormGroup>
 
-        <Button onClick={this.handleNewEstablishment}> Save</Button>
-        <Link to='/establishments' className='btn btn-warning'> Cancel</Link>
+        <Button onClick={this.handleNewEstablishment}>Save</Button>
+        <Link to='/establishments' className='btn btn-warning'>Cancel</Link>
         {success &&
           <Redirect to="/" />
         }
