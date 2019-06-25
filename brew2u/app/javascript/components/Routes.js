@@ -50,12 +50,13 @@ class Routes extends Component {
       .then(data => { this.setState({ establishments: data }) })
   }
   
-  componentDidMount = () => {
-    const { reviews } = this.state
-    fetch('/reviews.json')
-      .then(response => { return response.json() })
-      .then(data => { this.setState({ reviews: data }) })
-  }
+  // componentDidMount = () => {
+  //   const { reviews } = this.state
+  //   fetch('/reviews.json')
+  //     .then(response => { return response.json() })
+  //     .then(data => { this.setState({ reviews: data }) })
+  // }
+  
   handleNewEstablishment = (newEstablishmentInfo) => {
     return fetch("/establishments.json", {
       headers:{

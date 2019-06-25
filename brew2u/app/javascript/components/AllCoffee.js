@@ -5,13 +5,7 @@ import { Link, Route } from 'react-router-dom'
 
 
 class AllCoffee extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      
-    }
-  }
-  
+
   
   // handleList = () => {
   //   const { establishments } = this.props
@@ -47,23 +41,6 @@ class AllCoffee extends React.Component {
           return shop
         }
       })
-      //need to figure out how to access the ratings of each coffee shop
-      //also need ratings as an average of all ratings
-      // let bestCoffees = coffees.rating.sort((x, y) => {
-      //   return y-x
-      // })
-      return coffees.map(coffee=>{
-          return (
-            <div key={coffee.id}>
-              <h3>{coffee.company_name}</h3>
-              <h5>{coffee.street_1}</h5>
-              <h5>{coffee.street_2}</h5>
-              <h5>{coffee.city}.</h5>
-              <h5>{coffee.state}</h5>
-              <h5>{coffee.zip}</h5>
-              <br/>
-            </div>
-          )
       return coffeeShops.map(shop => {
         return (
           <div key={shop.id}>
