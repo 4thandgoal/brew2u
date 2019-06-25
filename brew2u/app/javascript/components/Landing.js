@@ -51,13 +51,13 @@ function Landing() {
         onRequestChange={i => {
           setIndex(i);
         }}
-    >
+      >
       
-      {images2.map(image => (
-        <GalleryImage objectFit="contain" key={image} src={image} />
-      ))}
+        {images2.map(image => (
+          <GalleryImage objectFit="contain" key={image} src={image} />
+        ))}
       
-    </Gallery>
+      </Gallery>
     
     </React.Fragment>
   );
