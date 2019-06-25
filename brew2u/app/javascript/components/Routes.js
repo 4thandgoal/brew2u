@@ -21,6 +21,7 @@ import banner from './brew2ulogo.png'
 import AllBeer from "./AllBeer";
 import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
+import MapContainer from "./MapContainer"
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
 import SingleShop from "./SingleShop"
@@ -213,6 +214,9 @@ class Routes extends Component {
                   handleNewReview={this.handleNewReview}
                 />
               }
+            />
+            <Route
+              path="/map" component = { MapContainer }
             />
             <Route
               path='/users/sign_in'
