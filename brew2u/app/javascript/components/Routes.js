@@ -191,7 +191,12 @@ class Routes extends Component {
             />
             <Route 
               path="/newreview"
-              render={(props)=><NewReview handleNewReview={this.handleNewReview} />}
+              render={
+                (props)=>
+                <NewReview
+                  handleNewReview={this.handleNewReview}
+                />
+              }
             />
             <Route
               path='/users/sign_in'
