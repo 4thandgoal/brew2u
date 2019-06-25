@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 
-class BestCoffee extends React.Component {
+class AllCoffee extends React.Component {
   render () {
     const { establishments } = this.props
     //highestRatedCoffee is to sort and display coffee shops that have the highest ratings
@@ -46,4 +46,4 @@ class BestCoffee extends React.Component {
   }
 }
 
-export default BestCoffee
+export default AllCoffee
