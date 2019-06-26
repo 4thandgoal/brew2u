@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import MapContainer from "./MapContainer"
 
 class SingleShop extends React.Component {
   constructor(props){
@@ -40,6 +40,7 @@ class SingleShop extends React.Component {
             <p>{shop.hours_of_operation}</p>
             <p>{shop.pet_friendly}</p>
             <p>{shop.wifi}</p>
+            <MapContainer />
           </div>
         }
       </React.Fragment>
