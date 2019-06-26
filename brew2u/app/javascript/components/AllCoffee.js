@@ -1,41 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import SingleShop from "./SingleShop"
-import { Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 class AllCoffee extends React.Component {
-
-  
-  // handleList = () => {
-  //   const { establishments } = this.props
-  //   let coffeeShops = establishments.filter(shop => {
-  //     if (/coffee/i.test(shop.coffee_or_beer)) {
-  //       return shop
-  //     }
-  //   })
-  //   return coffeeShops.map(shop => {
-  //     return (
-  //       <div key={shop.id}>
-  //         <a href='#singleshop'>
-  //           <h3>{shop.company_name}</h3>
-  //           <h5>{shop.street_1}</h5>
-  //           <h5>{shop.street_2}</h5>
-  //           <h5>{shop.city}</h5>
-  //           <h5>{shop.state}</h5>
-  //           <h5>{shop.zip}</h5>
-  //           <br/>
-  //         </a>
-  //       </div>
-  //     )
-  //   })
-  // }
-  
-  
   
   render () {
     const { establishments } = this.props
-    const singleShop = () => {
+    const allCoffeeShops = () => {
       let coffeeShops = establishments.filter(shop => {
         if (/coffee/i.test(shop.coffee_or_beer)) {
           return shop
@@ -59,7 +32,7 @@ class AllCoffee extends React.Component {
     }
     return (
       <React.Fragment>
-        { singleShop() }
+        { allCoffeeShops() }
       </React.Fragment>
     );
   }
