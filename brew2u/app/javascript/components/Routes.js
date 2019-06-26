@@ -203,6 +203,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <SingleShop
+                  {...props}
                   establishments={ establishments }
                 />
               }
