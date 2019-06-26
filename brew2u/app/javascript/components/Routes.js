@@ -203,6 +203,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <SingleShop
+                  {...props}
                   establishments={ establishments }
                 />
               }
@@ -217,7 +218,8 @@ class Routes extends Component {
               }
             />
             <Route
-              path="/map" component = { MapContainer }
+              path="/map"
+              component = { MapContainer }
             />
             <Route
               path='/users/sign_in'
