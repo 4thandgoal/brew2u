@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
 
 
 export class MapContainer extends React.Component {
@@ -10,26 +10,25 @@ export class MapContainer extends React.Component {
       height: "50%",
       
     }
+    const { name, latitude, longitude } = this.props
     return (
       <React.Fragment>
         <Map
-            google={this.props.google}
-            style={mapStyles}
-            center={{
-              lat: 32.892507,
-              lng: -117.144781
-            }}
-            zoom={15}
-            onClick={this.onMapClicked}
-          >
+          google={this.props.google}
+          style={mapStyles}
+          center={{
+            lat: {latitude},
+            lng: {longitude}
+          }}
+          zoom={15}
+          onClick={this.onMapClicked}
+        >
           <Marker onClick={this.onMarkerClick}
-                  name={'Mikkeller'} 
-                  title={'Mikkeller'}
-                  position = {{lat: 32.892507, lng: -117.144781}}
+            name={name} 
+            title={name}
+            position = {{lat: {latitude}, lng: {longitude}}}
           />
-          <InfoWindow onClose={this.onInfoWindowClose}>
-              
-          </InfoWindow>
+          {console.log(name)}
         </Map>
       </React.Fragment>
     );

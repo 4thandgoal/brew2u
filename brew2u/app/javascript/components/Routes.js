@@ -136,7 +136,7 @@ class Routes extends Component {
                 Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem>
+                  <DropdownItem href="#allcoffee">
                     Top Rated
                   </DropdownItem>
                   <DropdownItem divider />
@@ -150,7 +150,7 @@ class Routes extends Component {
                 Breweries
               </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem>
+                  <DropdownItem href="#allbeer">
                     Top Rated
                   </DropdownItem>
                   <DropdownItem divider />
@@ -159,12 +159,11 @@ class Routes extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="#allbeer">Beer</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#allcoffee">Coffee</NavLink>
-              </NavItem>
+              {adminLoggedIn &&
+                <NavItem>
+                  <NavLink href="#newestablishment">Register a New Establishment</NavLink>
+                </NavItem>
+              }
           </Nav>
         </div>
         <Switch>
@@ -226,6 +225,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <UserSignIn
+                  {...props}
                   userLoggedIn={ userLoggedIn }
                   userSignInRoute={ userSignInRoute }
                   userSignOutRoute={ userSignOutRoute }
@@ -237,6 +237,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <AdminSignIn
+                  {...props}
                   adminLoggedIn={ adminLoggedIn }
                   adminSignInRoute={ adminSignInRoute }
                   adminSignOutRoute={ adminSignOutRoute }
