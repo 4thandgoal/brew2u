@@ -23,7 +23,6 @@ class App extends React.Component {
             userLoggedIn={ user_logged_in }
             userSignInRoute={ user_sign_in_route }
             userSignOutRoute={ user_sign_out_route }
-            adminLoggedIn={ admin_logged_in }
             adminSignInRoute={ admin_sign_in_route }
             adminSignOutRoute={ admin_sign_out_route }
           />

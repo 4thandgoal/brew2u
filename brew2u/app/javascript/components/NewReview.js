@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { emptySymbol, fullSymbol, Rating } from 'react-rating';
+import ReactStars from 'react-stars'
 
 class NewReview extends React.Component {
   constructor(props){
@@ -33,8 +34,13 @@ class NewReview extends React.Component {
     this.setState({ success: redirect })
   }
   
+  
   render () {
     const{ success, attributes } = this.state
+    const ratingChanged = (newRating) => {
+  console.log(newRating)
+}
+
     return (
       <React.Fragment>
         <h1>Write a Review</h1>
@@ -48,25 +54,12 @@ class NewReview extends React.Component {
             value = {attributes.review}
           />
         </FormGroup>
-        <FormGroup>
-          <Label for="rating">On a scale of 1 = Worst to 5 = Best, please select your overall rating</Label>
-            <Input
-              type="select"
-              min="1"
-              max="5"
-              placeholderrating="1=Worst / 5=Best"
-              name="rating"
-              onChange={this.handleChange}
-              value = {attributes.rating}
-            >
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </Input>
-        </FormGroup>
-
+        <ReactStars
+        count={5}
+        onChange={ratingChanged}
+        size={24}
+        color2={'#ffd700'} />,
+      
         <Button onClick={this.handleNewReview}>Post Review</Button>
 
         {success &&
