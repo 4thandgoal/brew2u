@@ -7,7 +7,8 @@ export class MapContainer extends React.Component {
   render () {
     const mapStyles = {
       width: "50%",
-      height: "50%"
+      height: "50%",
+      
     }
     return (
       <React.Fragment>
@@ -22,8 +23,10 @@ export class MapContainer extends React.Component {
             onClick={this.onMapClicked}
           >
           <Marker onClick={this.onMarkerClick}
-                  name={'Current location'} />
-  
+                  name={'Mikkeller'} 
+                  title={'Mikkeller'}
+                  position = {{lat: 32.892507, lng: -117.144781}}
+          />
           <InfoWindow onClose={this.onInfoWindowClose}>
               
           </InfoWindow>
