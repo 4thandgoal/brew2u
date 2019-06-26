@@ -60,4 +60,96 @@ p {
 
 .logo {
     height: 80px;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    color: #EBEBEB;
+    height: 80px;
+    padding: 0;
+}
+
+#logintext {
+    padding-right: 50px;
+    font-size: 1.3em;
+}
+
+#beerlink {
+    width: 150px;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #333;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+}
+
+#beerlink:hover {
+    margin-left: 25px;   
+}
+
+#coffeelink {
+    width: 150px;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #333;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+}
+
+#coffeelink:hover {
+    margin-left: 25px;
+}
+
+#coffeeshopslink {
+    text-decoration: none;
+    font-size: 1.2em;
+    width: max-content;
+    color: blue;
+    font-weight: bold;
+    transition: ease-in-out .2s;
+}
+
+#brewerieslink {
+    text-decoration: none;
+    font-size: 1.2em;
+    width: max-content;
+    color: red;
+    font-weight: bold;
+    transition: ease-in-out .2s;
+}
+
+#coffeeshopslink:hover {
+    text-shadow: 0 0 10px blue;
+    color: white;
+}
+
+#brewerieslink:hover {
+    text-shadow: 0 0 10px red; 
+    color: white;
+}
+
+.userlogtext {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#usersignintext {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.usersignwrapper {
+    min-height: 500px;
 }

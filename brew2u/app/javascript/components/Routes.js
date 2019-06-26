@@ -97,13 +97,13 @@ class Routes extends Component {
     } = this.props
     return (
       <React.Fragment>
-        <Navbar color='light' light expand='md'>
+        <Navbar id="thenavbar" color='light' light expand='md'>
           <NavbarBrand href="/"><img className="logo" src={banner} alt="brew2u logo" /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
+                <DropdownToggle id="logintext" nav caret>
                   Log In
                 </DropdownToggle>
                 <DropdownMenu right>
@@ -132,7 +132,7 @@ class Routes extends Component {
         <div>
           <Nav vertical>
             <UncontrolledDropdown nav inNavbar>
-             <DropdownToggle nav caret>
+             <DropdownToggle id="coffeeshopslink" nav caret>
                 Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
@@ -146,7 +146,7 @@ class Routes extends Component {
                 </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle id="brewerieslink" nav caret>
                 Breweries
               </DropdownToggle>
                 <DropdownMenu >
@@ -160,10 +160,10 @@ class Routes extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="#allbeer">Beer</NavLink>
+                <NavLink href="#allbeer" id="beerlink">Beer</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#allcoffee">Coffee</NavLink>
+                <NavLink href="#allcoffee" id="coffeelink">Coffee</NavLink>
               </NavItem>
           </Nav>
         </div>
