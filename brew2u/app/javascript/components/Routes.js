@@ -103,28 +103,41 @@ class Routes extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Log In
-                </DropdownToggle>
-                <DropdownMenu right>
-                  {userLoggedIn &&
-                    <DropdownItem href='#users/sign_in'>User Logout
-                    </DropdownItem> 
-                  }
-                  {!userLoggedIn && 
-                    <DropdownItem href='#users/sign_in'>User Login
+                {!userLoggedIn && !adminLoggedIn &&
+                  <DropdownToggle nav caret>
+                    Log In
+                  </DropdownToggle>
+                }
+                {(userLoggedIn || adminLoggedIn) &&
+                  <DropdownToggle nav caret>
+                    Log Out
+                  </DropdownToggle>
+                }
+                {!userLoggedIn && !adminLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#users/sign_in'>
+                      User Login
                     </DropdownItem>
-                  }
-                <DropdownItem divider />
-                  {adminLoggedIn &&
-                    <DropdownItem href='#admins/sign_in'>Vendor Logout
-                    </DropdownItem> 
-                  }
-                  {!adminLoggedIn && 
-                    <DropdownItem href='#admins/sign_in'>Vendor Login
+                    <DropdownItem divider />
+                    <DropdownItem href='#admins/sign_in'>
+                      Vendor Login
                     </DropdownItem>
-                  }
-                </DropdownMenu>
+                  </DropdownMenu>
+                }
+                {userLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#users/sign_in'>
+                      User Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                }
+                {adminLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#admins/sign_in'>
+                      Vendor Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                }
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
