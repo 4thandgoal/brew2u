@@ -7,17 +7,19 @@ class UserSignIn extends React.Component {
     return (
       <React.Fragment>
         {userLoggedIn &&
-          <div className="usersignwrapper">
-            <h5 className="userlogtext">You are signed in! Welcome to Brew2U!</h5>
-            <a id="usersignouttext" href={ userSignOutRoute }>Sign Out</a>
+          <div className="signwrapper">
+            <h5 className="logtext">You are signed in! Welcome to Brew2U!</h5>
+            <div className="centerdiv">
+              <a className="usersigntext" href={ userSignOutRoute }>Sign Out</a>
+            </div>
           </div>
         }
         
         {!userLoggedIn &&
-          <div className="usersignwrapper">
-            <h5 className="userlogtext">You are not signed in! Please sign in to join our Brew2U community.</h5>
-            <div id="test">
-            <a id="usersignintext" href={ userSignInRoute }>User Sign In</a>
+          <div className="signwrapper">
+            <h5 className="logtext">You are not signed in! Please sign in to join our Brew2U community.</h5>
+            <div className="centerdiv">
+              <a className="usersigntext" href={ userSignInRoute }>User Sign In</a>
             </div>
           </div>
         }

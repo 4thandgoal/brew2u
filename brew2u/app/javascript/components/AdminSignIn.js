@@ -7,16 +7,20 @@ class AdminSignIn extends React.Component {
     return (
       <React.Fragment>
         {adminLoggedIn &&
-          <div>
-            <h5>You are signed in! Welcome to Brew2U!</h5>
-            <a href={ adminSignOutRoute }>Sign Out</a>
+          <div className="signwrapper">
+            <h5 className="logtext">You are signed in! Welcome to Brew2U!</h5>
+            <div className="centerdiv">
+              <a href={ adminSignOutRoute }>Sign Out</a>
+            </div>
           </div>
         }
         
         {!adminLoggedIn &&
-          <div>
-            <h5>You are not signed in! Please sign in to register your business.</h5>
-            <a href={ adminSignInRoute }>Sign In</a>
+          <div className="signwrapper">
+            <h5 className="logtext">You are not signed in! Please sign in to register your business.</h5>
+            <div className="centerdiv">
+              <a href={ adminSignInRoute }>Vendor Sign In</a>
+            </div>
           </div>
         }
       </React.Fragment>

@@ -137,19 +137,20 @@ p {
     color: white;
 }
 
-.userlogtext {
+.logtext {
     width: max-content;
     margin: 0 auto;
     text-align: center;
     margin-top: 30px;
 }
 
-#usersignintext {
+.centerdiv {
     margin: 0 auto;
-    text-align: center;
+    width: max-content;
     font-size: 1.5em;
+    margin-top: 15px;
 }
 
-.usersignwrapper {
+.signwrapper {
     min-height: 500px;
 }
