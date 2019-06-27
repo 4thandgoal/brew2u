@@ -103,18 +103,21 @@ class Routes extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle id="logintext" nav caret>
-                  Log In
-                </DropdownToggle>
-                <DropdownMenu right>
-                  {userLoggedIn &&
-                    <DropdownItem href='#users/sign_in'>User Logout
-                    </DropdownItem> 
-                  }
-                  {!userLoggedIn && 
-                    <DropdownItem href='#users/sign_in'>User Login
+                {!userLoggedIn && !adminLoggedIn &&
+                  <DropdownToggle nav caret>
+                    Log In
+                  </DropdownToggle>
+                }
+                {(userLoggedIn || adminLoggedIn) &&
+                  <DropdownToggle nav caret>
+                    Log Out
+                  </DropdownToggle>
+                }
+                {!userLoggedIn && !adminLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#users/sign_in'>
+                      User Login
                     </DropdownItem>
-                  }
                 <DropdownItem divider />
                   {adminLoggedIn &&
                     <DropdownItem href='#admins/sign_in'>Vendor Logout
@@ -159,12 +162,10 @@ class Routes extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="#allbeer" id="beerlink">Beer</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#allcoffee" id="coffeelink">Coffee</NavLink>
-              </NavItem>
+              {adminLoggedIn &&
+                <NavItem>
+                  <NavLink href="#newestablishment">Register a New Establishment</NavLink>
+                </NavItem>
           </Nav>
         </div>
         <Switch>
