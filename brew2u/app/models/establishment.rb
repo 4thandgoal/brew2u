@@ -8,9 +8,9 @@ class Establishment < ApplicationRecord
   
   def address
     if :street_2 =~ /\d/
-      [:street_1, :street_2, :city, :state, :zip]
+      [:street_1, :street_2, :city, :state, :zip].compact.join(', ')
     else
-      [:street_1, :city, :state, :zip]
+      [:street_1, :city, :state, :zip].compact.join(', ')
     end
   end
   
