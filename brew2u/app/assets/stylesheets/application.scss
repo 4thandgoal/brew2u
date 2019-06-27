@@ -31,11 +31,10 @@ footer {
     background-color: #EBEBEB;
 }
 
-p {
+.footerp {
     width: max-content;
     margin: 0 auto;
     text-align: center;
-    margin-top: 10px;
 }
 
 .carousel-item img {
@@ -259,3 +258,4 @@ background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%
 background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
 }
+

@@ -63,10 +63,10 @@
       <%= f.number_field :zip %>
     </div>
     
-    <%= if resource_name == "user" %>
+    <% if resource_name == "user" %>
     <div class="field">
       <%= f.label :date_of_birth %><br />
-      <%= f.date_field :phone %>
+      <%= f.date_field :date_of_birth %>
     </div>
     <% end %>
   
