@@ -258,10 +258,12 @@ class Routes extends Component {
               }
             />
         </Switch>
+        <container>
         <footer>
           <p>Brew2U</p>
           <p>&copy; 4th & Goal 2019</p>
         </footer>
+        </container>
       </React.Fragment>
     )
   }

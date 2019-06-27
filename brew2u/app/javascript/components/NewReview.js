@@ -13,7 +13,7 @@ class NewReview extends React.Component {
     this.state = {
       attributes: {
         review: '',
-        rating: '',
+        rating: 0,
       },
       success: false
     }

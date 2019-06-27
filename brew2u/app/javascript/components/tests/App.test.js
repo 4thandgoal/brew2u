@@ -7,14 +7,14 @@ import App from './App'
 import Routes from './Routes'
 
 Enzyme.configure({ adapter: new Adapter() })
-
+// is there a reference to intro on the Landing.js file?
 it('should display an introduction message', () => {
     const landing = mount(<Landing />)
     expect(landing.find('#intro').text()).toMatch(/\w/i)
 })
-
+// changed /App to /Landing since Brew2U is on the Landing.js component
 it('gives a message of title page name', ()=>{
-  const app = mount(<App />)
+  const app = mount(<Landing />)
   expect(app.find('h2').text()).toEqual('Brew2U')
 })
  
