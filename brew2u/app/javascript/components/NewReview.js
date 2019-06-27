@@ -42,23 +42,29 @@ class NewReview extends React.Component {
           <Label for="review">Review</Label>
           <Input 
             type="textarea" rows="5" cols="50" 
-            placeholder="Your review helps others learn about local businesses."
+            placeholder="Your review helps others learn about local coffee shops or microbreweries."
             name="review"
             onChange={this.handleChange}
             value = {attributes.review}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="rating">Star Rating</Label>
+          <Label for="rating">On a scale of 1 = Worst to 5 = Best, please select your overall rating</Label>
             <Input
-              type="number"
+              type="select"
               min="1"
               max="5"
-              placeholderrating="3"
+              placeholderrating="1=Worst / 5=Best"
               name="rating"
               onChange={this.handleChange}
               value = {attributes.rating}
-            />
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </Input>
         </FormGroup>
 
         <Button onClick={this.handleNewReview}>Post Review</Button>
