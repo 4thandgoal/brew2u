@@ -1,5 +1,7 @@
-<h2>Sign up</h2>
+<h2 class="deviseHeading"><%= resource_name.capitalize %> Sign up</h2>
 
+
+<div class="formWrap">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -21,9 +23,16 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
+  <div class="actions" id="signupBtn">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <div class="loginLinkWrap">
+    <%= render "devise/shared/links" %>
+  </div>
+
+  <div class="logoWrap">
+    <img src="https://codecopycoffee.com/wp-content/uploads/2019/06/brew2ulogo.png" alt="brew2ulogo" />
+  </div>
+</div>

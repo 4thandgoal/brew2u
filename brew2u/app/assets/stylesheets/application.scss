@@ -155,7 +155,77 @@ p {
     min-height: 500px;
 }
 
-.new_user {
+.deviseHeading {
     width: max-content;
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formWrap {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.loginLinkWrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logoWrap img {
+   height: 100px; 
+}
+
+.logoWrap {
+    width: max-content;
+    margin: 0 auto;
+}
+
+#userloginbtn {
+    width: 65px;
+    height: 35px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+#userloginbtn:hover, #signupBtn:hover {
+    background: rgba(255,0,0,1);
+background: -moz-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,0,0,1)), color-stop(100%, rgba(0,0,255,1)));
+background: -webkit-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: linear-gradient(135deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#0000ff', GradientType=1 );
+}
+
+.actions input {
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.field input {
+    border: 2px solid #333;
+}
+
+#signupBtn {
+    margin-top: 15px;
+    height: 35px;
+    width: 77px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
 }

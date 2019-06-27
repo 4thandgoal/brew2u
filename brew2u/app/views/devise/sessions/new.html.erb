@@ -1,5 +1,6 @@
-<h2><%= resource_name.capitalize %> Log in</h2>
+<h2 class="deviseHeading"><%= resource_name.capitalize %> Log in</h2>
 
+<div class="formWrap">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -18,9 +19,17 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  <div class="actions" id="userloginbtn">
     <%= f.submit "Log in" %>
   </div>
+  
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <div class="loginLinkWrap">
+    <%= render "devise/shared/links" %>
+  </div>
+  
+  <div class="logoWrap">
+    <img src="https://codecopycoffee.com/wp-content/uploads/2019/06/brew2ulogo.png" alt="brew2ulogo" />
+  </div>
+</div>
