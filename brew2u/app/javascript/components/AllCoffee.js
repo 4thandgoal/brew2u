@@ -26,6 +26,7 @@ class AllCoffee extends React.Component {
               <h5>{shop.zip}</h5>
               <br/>
             </Link>
+            {console.log(shop.rating)}
           </div>
         )
       })
