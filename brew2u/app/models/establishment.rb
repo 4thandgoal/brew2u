@@ -7,7 +7,7 @@ class Establishment < ApplicationRecord
   validates :zip, numericality: { only_integer: true }
   
   def address
-    if :street_2 =~ /\d/ || :street_2 =~ /\w/
+    if :street_2 =~ /\w/
       [:street_1, :street_2, :city, :state, :zip].compact.join(', ')
     else
       [:street_1, :city, :state, :zip].compact.join(', ')
