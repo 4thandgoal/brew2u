@@ -33,7 +33,7 @@ class SingleShop extends React.Component {
         {shop && 
           <div>
             <NavItem>
-              <NavLink href="#newreview">Write a Review</NavLink>
+              <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
             </NavItem>
             <h2>{shop.company_name}</h2>
             <h3><Rating /></h3>

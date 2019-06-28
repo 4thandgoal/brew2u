@@ -173,7 +173,9 @@ class Routes extends Component {
               </UncontrolledDropdown>
               {adminLoggedIn &&
                 <NavItem>
-                  <NavLink href="#newestablishment">Register a New Establishment</NavLink>
+                  <NavLink href="#newestablishment">
+                    Register a New Establishment
+                  </NavLink>
                 </NavItem>
               }
           </Nav>
@@ -223,10 +225,11 @@ class Routes extends Component {
               }
             />
             <Route 
-              path="/newreview"
+              path="/newreview/:establishment_id"
               render={
                 (props)=>
                 <NewReview
+                  {...props}
                   handleNewReview={this.handleNewReview}
                 />
               }

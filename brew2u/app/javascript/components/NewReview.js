@@ -12,10 +12,11 @@ class NewReview extends React.Component {
     super(props)
     this.state = {
       attributes: {
-        review: '',
-        rating: 0
+        rating: 0,
+        review: ''
       },
-      success: false
+      success: false,
+      shopId: match.params.id
     }
   }
   
@@ -33,12 +34,19 @@ class NewReview extends React.Component {
     this.setState({ success: redirect })
   }
   
+  componentDidUpdate = prevProps => {
+    const prevMatch = prevProps.match
+    const { match } = this.props
+    if (match.params.id != prevMatch.params.id) {
+      this.setState({ shopId: match.params.id })
+    }
+  }
   
   render () {
     const { success, attributes } = this.state
     return (
       <React.Fragment>
-        <h1><u>Write a Review</u></h1>
+        <h1>Write a Review</h1>
         <h5>Select Your Rating</h5>
         <Input
           type="select"
