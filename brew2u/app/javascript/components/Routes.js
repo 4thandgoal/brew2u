@@ -23,6 +23,7 @@ import Landing from "./Landing";
 import MapContainer from "./MapContainer"
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
+import ShopReviews from './ShopReviews'
 import SingleShop from "./SingleShop"
 import UserSignIn from "./UserSignIn";
 
@@ -72,7 +73,7 @@ class Routes extends Component {
 
   handleNewReview = (newReviewInfo) => {
     return fetch("/reviews.json", {
-      headers:{
+      headers: {
         'Content-Type': 'application/json'
       },
       method: 'POST',
@@ -214,6 +215,16 @@ class Routes extends Component {
               }
             />
             <Route
+              path="/shopreviews/:establishment_id"
+              render={
+                (props) =>
+                <ShopReviews
+                  {...props}
+                  reviews={ reviews }
+                />
+              }
+            />
+            <Route
               path="/singleshop/:id"
               render={
                 (props) =>
@@ -231,6 +242,7 @@ class Routes extends Component {
                 <NewReview
                   {...props}
                   handleNewReview={this.handleNewReview}
+                  reviews={ reviews }
                 />
               }
             />

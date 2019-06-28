@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 
     before_action :set_review, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:index, :show]
     
     def index
         reviews = Review.all
@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     def create
         review = current_user.reviews.new(review_params)
         if review.save
-            render json: review.leppard, status: 201
+            render json: review, status: 201
         else 
             # A 422 status code occurs when a request is well-formed, however, due to semantic errors it is unable to be processed.
             render json: review.errors.full_message, status: 422
