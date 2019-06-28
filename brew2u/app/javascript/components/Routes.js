@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import UserSignIn from "./UserSignIn";
-import AdminSignIn from "./AdminSignIn";
 import {
   Collapse,
   Navbar,
@@ -18,6 +16,7 @@ import banner from './brew2ulogo.png'
   
 
 //Routes
+import AdminSignIn from "./AdminSignIn";
 import AllBeer from "./AllBeer";
 import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
@@ -25,6 +24,7 @@ import MapContainer from "./MapContainer"
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
 import SingleShop from "./SingleShop"
+import UserSignIn from "./UserSignIn";
 
 class Routes extends Component {
   constructor(props) {
@@ -44,18 +44,17 @@ class Routes extends Component {
   }
   
   componentDidMount = () => {
-    const { establishments } = this.state
-    fetch('/establishments.json')
-      .then(response => { return response.json() })
-      .then(data => { this.setState({ establishments: data }) })
+    Promise.all([fetch('/establishments.json'), fetch('/reviews.json')])
+      .then(([response1, response2]) => {
+        return Promise.all([response1.json(), response2.json()])
+      })
+      .then(([data1, data2]) => {
+        this.setState({
+          establishments: data1,
+          reviews: data2
+        })
+      })
   }
-  
-  // componentDidMount = () => {
-  //   const { reviews } = this.state
-  //   fetch('/reviews.json')
-  //     .then(response => { return response.json() })
-  //     .then(data => { this.setState({ reviews: data }) })
-  // }
   
   handleNewEstablishment = (newEstablishmentInfo) => {
     return fetch("/establishments.json", {
@@ -97,7 +96,7 @@ class Routes extends Component {
     } = this.props
     return (
       <React.Fragment>
-        <Navbar color='light' light expand='md'>
+        <Navbar id="thenavbar" color='light' light expand='md'>
           <NavbarBrand href="/"><img className="logo" src={banner} alt="brew2u logo" /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -196,7 +195,9 @@ class Routes extends Component {
               render={
                 (props) =>
                 <AllCoffee
+                  {...props}
                   establishments={ establishments }
+                  reviews={reviews}
                   componentDidMount={ this.componentDidMount }
                 />
               }
@@ -217,6 +218,7 @@ class Routes extends Component {
                 <SingleShop
                   {...props}
                   establishments={ establishments }
+                  reviews={ reviews }
                 />
               }
             />
@@ -259,8 +261,8 @@ class Routes extends Component {
             />
         </Switch>
         <footer>
-          <p>Brew2U</p>
-          <p>&copy; 4th & Goal 2019</p>
+          <p className="footerp">Brew2U</p>
+          <p className="footerp">&copy; 4th & Goal 2019</p>
         </footer>
       </React.Fragment>
     )

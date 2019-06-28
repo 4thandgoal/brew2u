@@ -2,12 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import SingleShop from "./SingleShop"
 import { Link } from 'react-router-dom'
+import Rating from './Rating'
 
 
 class AllCoffee extends React.Component {
   
+
+  
   render () {
-    const { establishments } = this.props
+    const { establishments, reviews } = this.props
     const allCoffeeShops = () => {
       let coffeeShops = establishments.filter(shop => {
         if (/coffee/i.test(shop.coffee_or_beer)) {
@@ -16,6 +19,7 @@ class AllCoffee extends React.Component {
       })
       return coffeeShops.map(shop => {
         return (
+
           <div>
           <h2 className="pagetitle">Coffee Shops</h2>
           <div key={shop.id} className="shopwrapCoffee">
@@ -26,9 +30,9 @@ class AllCoffee extends React.Component {
               <h5 className="addressText">{shop.city}</h5>
               <h5 className="addressText">{shop.state}</h5>
               <h5 className="addressText">{shop.zip}</h5>
+
               <br/>
             </Link>
-            {console.log(shop.rating)}
           </div>
           </div>
         )

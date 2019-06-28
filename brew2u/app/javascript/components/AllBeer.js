@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import SingleShop from "./SingleShop"
+import Rating from './Rating'
 import { Link } from 'react-router-dom'
 
 class AllBeer extends React.Component {
@@ -15,6 +15,7 @@ class AllBeer extends React.Component {
       })
       return beers.map(beer=>{
           return (
+
             <div key={beer.id} className="shopwrapBeer">
               <Link to={`/singleshop/${beer.id}`} className="shoplink">
                 <h3 className="companyNameBeer">{beer.company_name}</h3>
@@ -23,6 +24,7 @@ class AllBeer extends React.Component {
                 <h5 className="addressText">{beer.city}</h5>
                 <h5 className="addressText">{beer.state}</h5>
                 <h5 className="addressText">{beer.zip}</h5>
+
                 <br/>
               </Link>
             </div>
