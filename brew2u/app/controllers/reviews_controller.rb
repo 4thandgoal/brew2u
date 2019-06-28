@@ -30,8 +30,7 @@ class ReviewsController < ApplicationController
     private
     
     def review_params
-        rating = rating.to_i
-        params.require(:review).permit(:rating, :review)
+        params.require(:review).permit(:user_id, :establishment_id, :rating, :review)
     end
 
     def set_review
