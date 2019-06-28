@@ -180,7 +180,7 @@ class NewEstablishment extends React.Component {
           </Input>
         </FormGroup>
 
-        <Button onClick={this.handleNewEstablishment}>Save</Button>
+        <div class="estBtnWrap"><Button onClick={this.handleNewEstablishment} id="newEstBtn">Save</Button></div>
         <Link to='/establishments' className='btn btn-warning'>Cancel</Link>
         {success &&
           <Redirect to="/" />
