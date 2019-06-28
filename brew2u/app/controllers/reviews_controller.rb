@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
-    # protect all establishment routes
+
     before_action :set_review, only: [:show, :edit, :update, :destroy]
-    # before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:index, :show]
     
     def index
         reviews = Review.all
@@ -30,6 +30,7 @@ class ReviewsController < ApplicationController
     private
     
     def review_params
+        rating = rating.to_i
         params.require(:review).permit(:rating, :review)
     end
 

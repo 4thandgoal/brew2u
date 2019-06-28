@@ -1,25 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { 
-  Link,
-  Redirect
-} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
 class NewReview extends React.Component {
   constructor(props){
     super(props)
+    const { match } = this.props
     this.state = {
       attributes: {
-        review: '',
-        rating: 0
+        shopId: match.params.id,
+        rating: 0,
+        review: ''
       },
       success: false
     }
   }
   
-  handleChange = (event)=>{
+  handleChange = (event) => {
     const { attributes } = this.state  
     attributes[event.target.name] = event.target.value
     this.setState({ attributes })
@@ -38,7 +37,7 @@ class NewReview extends React.Component {
     const { success, attributes } = this.state
     return (
       <React.Fragment>
-        <h1><u>Write a Review</u></h1>
+        <h1>Write a Review</h1>
         <h5>Select Your Rating</h5>
         <Input
           type="select"
@@ -68,7 +67,7 @@ class NewReview extends React.Component {
         <Button onClick={this.handleNewReview}>Post Review</Button>
 
         {success &&
-          <Redirect to="/" />
+          <Redirect to="/singleshop/:shopId" />
         }
       </React.Fragment>
     );
