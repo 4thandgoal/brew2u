@@ -30,7 +30,7 @@ class NewEstablishment extends React.Component {
   }
   
   
-  handleChange = (event)=>{
+  handleChange = (event) =>{
     const { attributes } = this.state  
     attributes[event.target.name] = event.target.value
     this.setState({ attributes })

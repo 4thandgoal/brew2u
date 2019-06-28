@@ -233,6 +233,7 @@ class Routes extends Component {
                   {...props}
                   establishments={ establishments }
                   reviews={ reviews }
+                  userLoggedIn={ userLoggedIn }
                 />
               }
             />

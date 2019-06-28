@@ -26,13 +26,15 @@ class SingleShop extends React.Component {
   
   render () {
     const { shopId } = this.state
-    const { establishments } = this.props
+    const { establishments, userLoggedIn } = this.props
     const shop = establishments.find(shop => shop.id == shopId)
     return (
       <React.Fragment>
         {shop && 
           <div>
-            <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
+            {userLoggedIn &&
+              <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
+            }
             <h2>{shop.company_name}</h2>
             <h3>Average Rating: {shop.average_rating}</h3>
             <h4>{shop.website}</h4>
@@ -54,7 +56,7 @@ class SingleShop extends React.Component {
               name={shop.company_name}
               latitude={shop.latitude}
               longitude={shop.longitude}
-              rating={shop.rating}
+              rating={shop.average_rating}
             />
             
           </div>

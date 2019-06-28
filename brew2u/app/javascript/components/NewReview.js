@@ -10,8 +10,8 @@ class NewReview extends React.Component {
     const { match } = this.props
     this.state = {
       attributes: {
-        shopId: match.params.id,
-        rating: 0,
+        establishment_id: match.params.id,
+        rating: ''.to_i,
         review: ''
       },
       success: false
@@ -67,7 +67,7 @@ class NewReview extends React.Component {
         <Button onClick={this.handleNewReview}>Post Review</Button>
 
         {success &&
-          <Redirect to="/singleshop/:shopId" />
+          <Redirect to="/singleshop/" />
         }
       </React.Fragment>
     );
