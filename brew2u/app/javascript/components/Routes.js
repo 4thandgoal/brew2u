@@ -110,7 +110,7 @@ class Routes extends Component {
                   </DropdownToggle>
                 }
                 {(userLoggedIn || adminLoggedIn) &&
-                  <DropdownToggle nav caret>
+                  <DropdownToggle id="logouttext" nav caret>
                     Log Out
                   </DropdownToggle>
                 }

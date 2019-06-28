@@ -184,7 +184,7 @@ class NewEstablishment extends React.Component {
         
         <div className="buttonContainer">
           <div className="estBtnWrap"><Button onClick={this.handleNewEstablishment} id="newEstBtn">Save</Button></div>
-          <div className="cancelBtnWrap"><Link to='/establishments' id="cancelBtn">Cancel</Link></div>
+          <Link to='/establishments' id="cancelBtn">Cancel</Link>
         </div>
 
         {success &&
