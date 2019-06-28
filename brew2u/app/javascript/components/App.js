@@ -21,6 +21,7 @@ class App extends React.Component {
         <Router>
           <Routes
             userLoggedIn={ user_logged_in }
+            adminLoggedIn={ admin_logged_in }
             userSignInRoute={ user_sign_in_route }
             userSignOutRoute={ user_sign_out_route }
             adminSignInRoute={ admin_sign_in_route }

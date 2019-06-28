@@ -29,7 +29,7 @@ const items = [
     caption: ""
   },
   {
-    src: 'http://codecopycoffee.com/wp-content/uploads/2019/06/coffee1.jpg',
+    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/coffee1.jpg',
     altText: 'A steaming mug of coffee on a pile of coffee beans',
     caption: ""
   },

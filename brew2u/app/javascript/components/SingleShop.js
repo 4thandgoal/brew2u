@@ -36,7 +36,7 @@ class SingleShop extends React.Component {
               <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
             }
             <h2>{shop.company_name}</h2>
-            <h3>{shop.average_rating}</h3>
+            <h3>Average Rating: {shop.average_rating}</h3>
             <h4>{shop.website}</h4>
             <h4>{shop.phone}</h4>
             <h5>{shop.street_1}</h5>
@@ -44,7 +44,7 @@ class SingleShop extends React.Component {
             <h5>{shop.city}</h5>
             <h5>{shop.state}</h5>
             <h5>{shop.zip}</h5>
-            <p>{shop.hours_of_operation}</p>
+            <p>Business Hours: {shop.hours_of_operation}</p>
             <p>{shop.pet_friendly}</p>
             <p>{shop.wifi}</p>
             <hr />
