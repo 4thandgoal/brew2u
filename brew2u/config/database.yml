@@ -77,11 +77,3 @@ test:
 #
   # production:
   #   url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-<<<<<<< HEAD
-  url: <%= ENV['DATABASE_URL'] %>
-  
-=======
-   url: <%= ENV['DATABASE_URL'] %>
->>>>>>> 8429943d89146665fc7eb41e3f42c73f7bdf4bf7
