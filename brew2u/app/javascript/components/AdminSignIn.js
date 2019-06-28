@@ -10,7 +10,7 @@ class AdminSignIn extends React.Component {
           <div className="signwrapper">
             <h5 className="logtext">You are signed in! Welcome to Brew2U!</h5>
             <div className="centerdiv">
-              <a href={ adminSignOutRoute }>Sign Out</a>
+              <a className="usersigntext" href={ adminSignOutRoute }>Sign Out</a>
             </div>
           </div>
         }
@@ -19,7 +19,7 @@ class AdminSignIn extends React.Component {
           <div className="signwrapper">
             <h5 className="logtext">You are not signed in! Please sign in to register your business.</h5>
             <div className="centerdiv">
-              <a href={ adminSignInRoute }>Vendor Sign In</a>
+              <a className="usersigntext" href={ adminSignInRoute }>Vendor Sign In</a>
             </div>
           </div>
         }
