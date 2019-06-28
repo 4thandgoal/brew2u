@@ -96,7 +96,7 @@ class Routes extends Component {
     } = this.props
     return (
       <React.Fragment>
-        <Navbar color='light' light expand='md'>
+        <Navbar id="thenavbar" color='light' light expand='md'>
           <NavbarBrand href="/"><img className="logo" src={banner} alt="brew2u logo" /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -144,7 +144,7 @@ class Routes extends Component {
         <div>
           <Nav vertical>
             <UncontrolledDropdown nav inNavbar>
-             <DropdownToggle nav caret>
+             <DropdownToggle id="coffeeshopslink" nav caret>
                 Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
@@ -158,7 +158,7 @@ class Routes extends Component {
                 </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle id="brewerieslink" nav caret>
                 Breweries
               </DropdownToggle>
                 <DropdownMenu >
@@ -261,8 +261,8 @@ class Routes extends Component {
             />
         </Switch>
         <footer>
-          <p>Brew2U</p>
-          <p>&copy; 4th & Goal 2019</p>
+          <p className="footerp">Brew2U</p>
+          <p className="footerp">&copy; 4th & Goal 2019</p>
         </footer>
       </React.Fragment>
     )
