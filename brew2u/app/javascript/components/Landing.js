@@ -11,26 +11,32 @@ const items = [
   {
     src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/coffee3.jpg',
     altText: 'Group of mugs containing different types of coffee',
+    caption: ""
   },
   {
     src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/beer3.jpg',
     altText: 'Beer being poured from a tap',
+    caption: ""
   },
   {
     src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/coffee2.jpg',
     altText: 'A mug of coffee seen from above atpo a heart-shaped pile of coffee beans',
+    caption: ""
   },
   {
     src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/beer2.jpg',
     altText: 'A flight of different types of beer',
+    caption: ""
   },
   {
     src: 'http://codecopycoffee.com/wp-content/uploads/2019/06/coffee1.jpg',
     altText: 'A steaming mug of coffee on a pile of coffee beans',
+    caption: ""
   },
   {
     src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/beer1.jpg',
     altText: 'Two hands extending to cheers bottles of beer with a sunset in the background',
+    caption: ""
   }
 ];
 

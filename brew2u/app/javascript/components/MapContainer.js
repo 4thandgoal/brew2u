@@ -35,7 +35,9 @@ class MapContainer extends React.Component {
       height: "50%",
     }
       
-    const { google, name, latitude, longitude } = this.props
+
+    const { google, name, latitude, longitude, rating } = this.props
+    
     return (
       <React.Fragment>
         <Map
@@ -50,7 +52,8 @@ class MapContainer extends React.Component {
         >
           <Marker onClick={this.onMarkerClick}
 
-            name={name} 
+            name= {name}
+            rating= {`Average rating: ${rating}`}
             title={name}
             position = {{lat: latitude, lng: longitude}}
           />
@@ -58,9 +61,11 @@ class MapContainer extends React.Component {
           <InfoWindow
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
+            maxWidth="180"
           >
             <div>
               <h5>{this.state.selectedPlace.name}</h5>
+              <h7>{this.state.selectedPlace.rating}</h7>
             </div>
           </InfoWindow>
         </Map>
