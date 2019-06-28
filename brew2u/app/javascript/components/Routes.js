@@ -25,6 +25,7 @@ import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
 import SingleShop from "./SingleShop"
 import UserSignIn from "./UserSignIn";
+import AboutUs from "./AboutUs";
 
 class Routes extends Component {
   constructor(props) {
@@ -103,7 +104,7 @@ class Routes extends Component {
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
                 {!userLoggedIn && !adminLoggedIn &&
-                  <DropdownToggle nav caret>
+                  <DropdownToggle id="logintext" nav caret>
                     Log In
                   </DropdownToggle>
                 }
@@ -173,7 +174,7 @@ class Routes extends Component {
               </UncontrolledDropdown>
               {adminLoggedIn &&
                 <NavItem>
-                  <NavLink href="#newestablishment">Register a New Establishment</NavLink>
+                    <NavLink href="#newestablishment" id="registerEstLink">Register a New Establishment</NavLink>
                 </NavItem>
               }
           </Nav>
@@ -260,10 +261,15 @@ class Routes extends Component {
               }
             />
         </Switch>
+        <container>
         <footer>
+          <NavItem>
+                  <NavLink href="#aboutus">About Us</NavLink>
+          </NavItem>
           <p className="footerp">Brew2U</p>
           <p className="footerp">&copy; 4th & Goal 2019</p>
         </footer>
+        </container>
       </React.Fragment>
     )
   }

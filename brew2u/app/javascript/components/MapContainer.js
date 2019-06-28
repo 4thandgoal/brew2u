@@ -35,8 +35,9 @@ class MapContainer extends React.Component {
       height: "50%",
     }
       
+
     const { google, name, latitude, longitude, rating } = this.props
-    console.log(this.props)
+    
     return (
       <React.Fragment>
         <Map
