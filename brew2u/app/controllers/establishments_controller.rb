@@ -5,7 +5,7 @@ class EstablishmentsController < ApplicationController
     
     def index
         establishments = Establishment.all
-        render json: establishments, status: 200
+        render json: establishments.to_json(:methods => :average_rating), status: 200
     end
     
     def show
@@ -14,7 +14,7 @@ class EstablishmentsController < ApplicationController
     def create
         establishment = current_admin.establishments.new(establishment_params)
         if establishment.save
-            render json: establishment, status: 201
+            render json: establishment.to_json(:methods => :average_rating), status: 201
         else 
             # A 422 status code occurs when a request is well-formed, however, due to semantic errors it is unable to be processed.
             render json: establishment.errors.full_message, status: 422
