@@ -54,7 +54,7 @@ class SingleShop extends React.Component {
               name={shop.company_name}
               latitude={shop.latitude}
               longitude={shop.longitude}
-              rating={shop.rating}
+              rating={shop.average_rating}
             />
             
           </div>
