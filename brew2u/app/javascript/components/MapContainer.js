@@ -35,7 +35,7 @@ class MapContainer extends React.Component {
       height: "50%",
     }
       
-    const { google, name, latitude, longitude } = this.props
+    const { google, name, latitude, longitude, rating } = this.props
     console.log(this.props)
     return (
       <React.Fragment>
@@ -43,22 +43,23 @@ class MapContainer extends React.Component {
           google={google}
           style={mapStyles}
           initialCenter={{
-            lat: {latitude},
-            lng: {longitude}
+            lat: latitude,
+            lng: longitude
           }}
           zoom={15}
           onClick={this.onMapClicked}
         >
           <Marker onClick={this.onMarkerClick}
 
-            name={name} 
+            name= {`${name} Average rating: ${rating}`}
             title={name}
-            position = {{lat: {latitude}, lng: {longitude}}}
+            position = {{lat: latitude, lng: longitude}}
           />
         
           <InfoWindow
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
+            maxWidth="180"
           >
             <div>
               <h5>{this.state.selectedPlace.name}</h5>
