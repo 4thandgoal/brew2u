@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Landing from './Landing'
+import Landing from '../components/Landing'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import App from './App'
-import Routes from './Routes'
+import App from '../components/App'
+import Routes from '../components/Routes'
 
 Enzyme.configure({ adapter: new Adapter() })
 // is there a reference to intro on the Landing.js file?
