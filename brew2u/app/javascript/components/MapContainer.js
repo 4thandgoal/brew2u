@@ -51,7 +51,8 @@ class MapContainer extends React.Component {
         >
           <Marker onClick={this.onMarkerClick}
 
-            name= {`${name} Average rating: ${rating}`}
+            name= {name}
+            rating= {`Average rating: ${rating}`}
             title={name}
             position = {{lat: latitude, lng: longitude}}
           />
@@ -63,6 +64,7 @@ class MapContainer extends React.Component {
           >
             <div>
               <h5>{this.state.selectedPlace.name}</h5>
+              <h7>{this.state.selectedPlace.rating}</h7>
             </div>
           </InfoWindow>
         </Map>
