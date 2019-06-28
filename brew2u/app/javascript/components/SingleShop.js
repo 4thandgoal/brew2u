@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MapContainer from "./MapContainer"
+import Rating from './Rating'
 import { Link } from 'react-router-dom';
 import { NavItem, NavLink } from 'reactstrap';
 
@@ -31,11 +32,11 @@ class SingleShop extends React.Component {
       <React.Fragment>
         {shop && 
           <div>
-          <NavItem>
-                <NavLink href="#newreview">Write a Review</NavLink>
-          </NavItem>
+            <NavItem>
+              <NavLink href="#newreview">Write a Review</NavLink>
+            </NavItem>
             <h2>{shop.company_name}</h2>
-            <h3>Placeholder: Average Rating</h3>
+            <h3><Rating /></h3>
             <h4>{shop.website}</h4>
             <h4>{shop.phone}</h4>
             <h5>{shop.street_1}</h5>
@@ -46,12 +47,12 @@ class SingleShop extends React.Component {
             <p>{shop.hours_of_operation}</p>
             <p>{shop.pet_friendly}</p>
             <p>{shop.wifi}</p>
-            {console.log(shop.rating)}
             <MapContainer
               name={shop.company_name}
               latitude={shop.latitude}
               longitude={shop.longitude}
             />
+            
           </div>
         }
       </React.Fragment>

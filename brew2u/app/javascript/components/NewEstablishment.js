@@ -151,6 +151,7 @@ class NewEstablishment extends React.Component {
             onChange={this.handleChange}
             value = {attributes.pet_friendly}
           >
+            <option></option>
             <option>true</option>
             <option>false</option>
           </Input>
@@ -163,6 +164,7 @@ class NewEstablishment extends React.Component {
             onChange={this.handleChange}
             value = {attributes.wifi}
           >
+            <option></option>
             <option>true</option>
             <option>false</option>
           </Input>

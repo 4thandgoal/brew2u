@@ -6,7 +6,6 @@ class Rating extends React.Component {
     return (
       <React.Fragment>
         {this.props.averageRating}
-        <p>low rating</p>
       </React.Fragment>
     );
   }

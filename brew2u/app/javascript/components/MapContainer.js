@@ -36,15 +36,14 @@ class MapContainer extends React.Component {
     }
       
     const { google, name, latitude, longitude } = this.props
-    console.log(this.props)
     return (
       <React.Fragment>
         <Map
           google={google}
           style={mapStyles}
           initialCenter={{
-            lat: {latitude},
-            lng: {longitude}
+            lat: latitude,
+            lng: longitude
           }}
           zoom={15}
           onClick={this.onMapClicked}
@@ -53,7 +52,7 @@ class MapContainer extends React.Component {
 
             name={name} 
             title={name}
-            position = {{lat: {latitude}, lng: {longitude}}}
+            position = {{lat: latitude, lng: longitude}}
           />
         
           <InfoWindow
