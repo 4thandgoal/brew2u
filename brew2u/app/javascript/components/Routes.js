@@ -118,16 +118,26 @@ class Routes extends Component {
                     <DropdownItem href='#users/sign_in'>
                       User Login
                     </DropdownItem>
-                <DropdownItem divider />
-                  {adminLoggedIn &&
-                    <DropdownItem href='#admins/sign_in'>Vendor Logout
-                    </DropdownItem> 
-                  }
-                  {!adminLoggedIn && 
-                    <DropdownItem href='#admins/sign_in'>Vendor Login
+                    <DropdownItem divider />
+                    <DropdownItem href='#admins/sign_in'>
+                      Vendor Login
                     </DropdownItem>
-                  }
-                </DropdownMenu>
+                  </DropdownMenu>
+                }
+                {userLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#users/sign_in'>
+                      User Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                }
+                {adminLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#admins/sign_in'>
+                      Vendor Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                }
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
@@ -139,7 +149,7 @@ class Routes extends Component {
                 Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem>
+                  <DropdownItem href="#allcoffee">
                     Top Rated
                   </DropdownItem>
                   <DropdownItem divider />
@@ -153,7 +163,7 @@ class Routes extends Component {
                 Breweries
               </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem>
+                  <DropdownItem href="#allbeer">
                     Top Rated
                   </DropdownItem>
                   <DropdownItem divider />
@@ -166,6 +176,7 @@ class Routes extends Component {
                 <NavItem>
                   <NavLink href="#newestablishment">Register a New Establishment</NavLink>
                 </NavItem>
+              }
           </Nav>
         </div>
         <Switch>
@@ -204,6 +215,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <SingleShop
+                  {...props}
                   establishments={ establishments }
                 />
               }
@@ -218,13 +230,15 @@ class Routes extends Component {
               }
             />
             <Route
-              path="/map" component = { MapContainer }
+              path="/map"
+              component = { MapContainer }
             />
             <Route
               path='/users/sign_in'
               render={
                 (props) =>
                 <UserSignIn
+                  {...props}
                   userLoggedIn={ userLoggedIn }
                   userSignInRoute={ userSignInRoute }
                   userSignOutRoute={ userSignOutRoute }
@@ -236,6 +250,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <AdminSignIn
+                  {...props}
                   adminLoggedIn={ adminLoggedIn }
                   adminSignInRoute={ adminSignInRoute }
                   adminSignOutRoute={ adminSignOutRoute }
