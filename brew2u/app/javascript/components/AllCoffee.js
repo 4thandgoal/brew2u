@@ -16,17 +16,20 @@ class AllCoffee extends React.Component {
       })
       return coffeeShops.map(shop => {
         return (
-          <div key={shop.id}>
-            <Link to={`/singleshop/${shop.id}`}>
-              <h3>{shop.company_name}</h3>
-              <h5>{shop.street_1}</h5>
-              <h5>{shop.street_2}</h5>
-              <h5>{shop.city}</h5>
-              <h5>{shop.state}</h5>
-              <h5>{shop.zip}</h5>
+          <div>
+          <h2 className="pagetitle">Coffee Shops</h2>
+          <div key={shop.id} className="shopwrapCoffee">
+            <Link to={`/singleshop/${shop.id}`} className="shoplink">
+              <h3 className="companyNameCoffee">{shop.company_name}</h3>
+              <h5 className="addressText">{shop.street_1}</h5>
+              <h5 className="addressText">{shop.street_2}</h5>
+              <h5 className="addressText">{shop.city}</h5>
+              <h5 className="addressText">{shop.state}</h5>
+              <h5 className="addressText">{shop.zip}</h5>
               <br/>
             </Link>
             {console.log(shop.rating)}
+          </div>
           </div>
         )
       })

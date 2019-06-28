@@ -104,7 +104,7 @@ class Routes extends Component {
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
                 {!userLoggedIn && !adminLoggedIn &&
-                  <DropdownToggle nav caret>
+                  <DropdownToggle id="logintext" nav caret>
                     Log In
                   </DropdownToggle>
                 }
@@ -145,7 +145,7 @@ class Routes extends Component {
         <div>
           <Nav vertical>
             <UncontrolledDropdown nav inNavbar>
-             <DropdownToggle nav caret>
+             <DropdownToggle id="coffeeshopslink" nav caret>
                 Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
@@ -159,7 +159,7 @@ class Routes extends Component {
                 </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle id="brewerieslink" nav caret>
                 Breweries
               </DropdownToggle>
                 <DropdownMenu >
@@ -174,7 +174,7 @@ class Routes extends Component {
               </UncontrolledDropdown>
               {adminLoggedIn &&
                 <NavItem>
-                  <NavLink href="#newestablishment">Register a New Establishment</NavLink>
+                  <NavLink href="#newestablishment" id="registerEstLink">Register a New Establishment</NavLink>
                 </NavItem>
               }
           </Nav>

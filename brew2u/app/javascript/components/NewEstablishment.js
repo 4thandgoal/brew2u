@@ -50,8 +50,9 @@ class NewEstablishment extends React.Component {
       <React.Fragment>
         <h1>New Establishment</h1>
         <FormGroup>
-          <Label for="company_name">Company Name</Label>
-          <Input 
+          <Label for="company_name" className="formLabel">Company Name</Label>
+          <Input
+            id="formInput1"
             type="text" 
             name="company_name"
             onChange={this.handleChange}
@@ -59,8 +60,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="coffee_or_beer">Coffee or Beer</Label>
-          <Input 
+          <Label for="coffee_or_beer" className="formLabel">Coffee or Beer</Label>
+          <Input
+            id="formInput2"
             type="select" 
             name="coffee_or_beer"
             onChange={this.handleChange}
@@ -72,8 +74,9 @@ class NewEstablishment extends React.Component {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="phone">Phone Number</Label>
-          <Input 
+          <Label for="phone" className="formLabel">Phone Number</Label>
+          <Input
+            id="formInput3"
             type="text" 
             name="phone"
             onChange={this.handleChange}
@@ -81,8 +84,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="website">Website</Label>
-          <Input 
+          <Label for="website" className="formLabel">Website</Label>
+          <Input
+            id="formInput4"
             type="text" 
             name="website"
             onChange={this.handleChange}
@@ -90,8 +94,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="street_1">Street Address</Label>
-          <Input 
+          <Label for="street_1" className="formLabel">Street Address</Label>
+          <Input
+            id="formInput5"
             type="text" 
             name="street_1"
             onChange={this.handleChange}
@@ -99,8 +104,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="street_2">Building or Suite Number</Label>
+          <Label for="street_2" className="formLabel">Building or Suite Number</Label>
           <Input 
+            id="formInput6"
             type="text" 
             name="street_2"
             onChange={this.handleChange}
@@ -108,8 +114,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="city">City</Label>
+          <Label for="city" className="formLabel">City</Label>
           <Input 
+            id="formInput7"
             type="text" 
             name="city" 
             onChange={this.handleChange}
@@ -117,8 +124,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="state">State</Label>
+          <Label for="state" className="formLabel">State</Label>
           <Input 
+            id="formInput8"
             type="text" 
             name="state" 
             onChange={this.handleChange}
@@ -126,8 +134,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="zip">Zip Code</Label>
+          <Label for="zip" className="formLabel">Zip Code</Label>
           <Input 
+            id="formInput9"
             type="text" 
             name="zip" 
             onChange={this.handleChange}
@@ -135,8 +144,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="hours_of_operation">Hours of Operation</Label>
+          <Label for="hours_of_operation" className="formLabel">Hours of Operation</Label>
           <Input 
+            id="formInput10"
             type="text" 
             name="hours_of_operation" 
             onChange={this.handleChange}
@@ -144,8 +154,9 @@ class NewEstablishment extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="pet_friendly">Pet Friendly</Label>
+          <Label for="pet_friendly" className="formLabel">Pet Friendly</Label>
           <Input 
+            id="formInput11"
             type="select" 
             name="pet_friendly" 
             onChange={this.handleChange}
@@ -156,8 +167,9 @@ class NewEstablishment extends React.Component {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="wifi">Wifi Available</Label>
+          <Label for="wifi" className="formLabel">Wifi Available</Label>
           <Input 
+            id="formInput12"
             type="select" 
             name="wifi" 
             onChange={this.handleChange}
