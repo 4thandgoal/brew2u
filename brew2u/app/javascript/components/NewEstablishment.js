@@ -179,9 +179,12 @@ class NewEstablishment extends React.Component {
             <option>false</option>
           </Input>
         </FormGroup>
+        
+        <div className="buttonContainer">
+          <div className="estBtnWrap"><Button onClick={this.handleNewEstablishment} id="newEstBtn">Save</Button></div>
+          <div className="cancelBtnWrap"><Link to='/establishments' id="cancelBtn">Cancel</Link></div>
+        </div>
 
-        <div class="estBtnWrap"><Button onClick={this.handleNewEstablishment} id="newEstBtn">Save</Button></div>
-        <Link to='/establishments' className='btn btn-warning'>Cancel</Link>
         {success &&
           <Redirect to="/" />
         }

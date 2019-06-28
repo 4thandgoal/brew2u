@@ -174,7 +174,7 @@ class Routes extends Component {
               </UncontrolledDropdown>
               {adminLoggedIn &&
                 <NavItem>
-                  <NavLink href="#newestablishment" id="registerEstLink">Register a New Establishment</NavLink>
+                    <NavLink href="#newestablishment" id="registerEstLink">Register a New Establishment</NavLink>
                 </NavItem>
               }
           </Nav>
