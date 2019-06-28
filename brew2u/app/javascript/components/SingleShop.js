@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import MapContainer from "./MapContainer"
 
+
 class SingleShop extends React.Component {
   constructor(props){
     super(props)
