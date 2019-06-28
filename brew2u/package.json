@@ -40,6 +40,8 @@
     "roots": [
       "test/javascript"
     ],
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
+    "setupFilesAfterEnv": [
+      "<rootDir>/app/javascript/components/tests/App.test.js"
+    ]
   }
 }

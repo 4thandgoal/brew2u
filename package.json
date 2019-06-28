@@ -1,0 +1,11 @@
+{
+  "name": "brew2u",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/4thandgoal/brew2u.git",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "private": true
+}
