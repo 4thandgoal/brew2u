@@ -26,7 +26,6 @@ import NewReview from "./NewReview"
 import ShopReviews from './ShopReviews'
 import SingleShop from "./SingleShop"
 import UserSignIn from "./UserSignIn";
-import AboutUs from "./AboutUs";
 
 class Routes extends Component {
   constructor(props) {
@@ -276,15 +275,11 @@ class Routes extends Component {
               }
             />
         </Switch>
-        <container>
         <footer>
-          <NavItem>
-                  <NavLink href="#aboutus">About Us</NavLink>
-          </NavItem>
+          <a href="#aboutus">About Us</a>
           <p className="footerp">Brew2U</p>
           <p className="footerp">&copy; 4th & Goal 2019</p>
         </footer>
-        </container>
       </React.Fragment>
     )
   }

@@ -32,9 +32,7 @@ class SingleShop extends React.Component {
       <React.Fragment>
         {shop && 
           <div>
-            <NavItem>
-              <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
-            </NavItem>
+            <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
             <h2>{shop.company_name}</h2>
             <h3>{shop.average_rating}</h3>
             <h4>{shop.website}</h4>
