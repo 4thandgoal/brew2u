@@ -66,6 +66,7 @@ class NewEstablishment extends React.Component {
             onChange={this.handleChange}
             value = {attributes.coffee_or_beer}
           >
+            <option></option>
             <option>Coffee</option>
             <option>Beer</option>
           </Input>
@@ -177,4 +178,4 @@ class NewEstablishment extends React.Component {
   }
 }
 
-export default NewEstablishment
+export default NewEstablishment;

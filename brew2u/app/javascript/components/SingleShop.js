@@ -4,6 +4,7 @@ import MapContainer from "./MapContainer"
 import { Link } from 'react-router-dom';
 import { NavItem, NavLink } from 'reactstrap';
 
+
 class SingleShop extends React.Component {
   constructor(props){
     super(props)
@@ -45,7 +46,12 @@ class SingleShop extends React.Component {
             <p>{shop.hours_of_operation}</p>
             <p>{shop.pet_friendly}</p>
             <p>{shop.wifi}</p>
-            <MapContainer />
+            {console.log(shop.rating)}
+            <MapContainer
+              name={shop.company_name}
+              latitude={shop.latitude}
+              longitude={shop.longitude}
+            />
           </div>
         }
       </React.Fragment>

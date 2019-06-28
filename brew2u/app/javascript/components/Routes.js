@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import UserSignIn from "./UserSignIn";
-import AdminSignIn from "./AdminSignIn";
 import {
   Collapse,
   Navbar,
@@ -18,6 +16,7 @@ import banner from './brew2ulogo.png'
   
 
 //Routes
+import AdminSignIn from "./AdminSignIn";
 import AllBeer from "./AllBeer";
 import AllCoffee from "./AllCoffee";
 import Landing from "./Landing";
@@ -25,6 +24,7 @@ import MapContainer from "./MapContainer"
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
 import SingleShop from "./SingleShop"
+import UserSignIn from "./UserSignIn";
 
 class Routes extends Component {
   constructor(props) {
@@ -44,18 +44,17 @@ class Routes extends Component {
   }
   
   componentDidMount = () => {
-    const { establishments } = this.state
-    fetch('/establishments.json')
-      .then(response => { return response.json() })
-      .then(data => { this.setState({ establishments: data }) })
+    Promise.all([fetch('/establishments.json'), fetch('/reviews.json')])
+      .then(([response1, response2]) => {
+        return Promise.all([response1.json(), response2.json()])
+      })
+      .then(([data1, data2]) => {
+        this.setState({
+          establishments: data1,
+          reviews: data2
+        })
+      })
   }
-  
-  // componentDidMount = () => {
-  //   const { reviews } = this.state
-  //   fetch('/reviews.json')
-  //     .then(response => { return response.json() })
-  //     .then(data => { this.setState({ reviews: data }) })
-  // }
   
   handleNewEstablishment = (newEstablishmentInfo) => {
     return fetch("/establishments.json", {
@@ -103,28 +102,41 @@ class Routes extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Log In
-                </DropdownToggle>
-                <DropdownMenu right>
-                  {userLoggedIn &&
-                    <DropdownItem href='#users/sign_in'>User Logout
-                    </DropdownItem> 
-                  }
-                  {!userLoggedIn && 
-                    <DropdownItem href='#users/sign_in'>User Login
+                {!userLoggedIn && !adminLoggedIn &&
+                  <DropdownToggle nav caret>
+                    Log In
+                  </DropdownToggle>
+                }
+                {(userLoggedIn || adminLoggedIn) &&
+                  <DropdownToggle nav caret>
+                    Log Out
+                  </DropdownToggle>
+                }
+                {!userLoggedIn && !adminLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#users/sign_in'>
+                      User Login
                     </DropdownItem>
-                  }
-                <DropdownItem divider />
-                  {adminLoggedIn &&
-                    <DropdownItem href='#admins/sign_in'>Vendor Logout
-                    </DropdownItem> 
-                  }
-                  {!adminLoggedIn && 
-                    <DropdownItem href='#admins/sign_in'>Vendor Login
+                    <DropdownItem divider />
+                    <DropdownItem href='#admins/sign_in'>
+                      Vendor Login
                     </DropdownItem>
-                  }
-                </DropdownMenu>
+                  </DropdownMenu>
+                }
+                {userLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#users/sign_in'>
+                      User Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                }
+                {adminLoggedIn &&
+                  <DropdownMenu right>
+                    <DropdownItem href='#admins/sign_in'>
+                      Vendor Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                }
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
@@ -136,7 +148,7 @@ class Routes extends Component {
                 Coffee Shops
               </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem>
+                  <DropdownItem href="#allcoffee">
                     Top Rated
                   </DropdownItem>
                   <DropdownItem divider />
@@ -150,7 +162,7 @@ class Routes extends Component {
                 Breweries
               </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem>
+                  <DropdownItem href="#allbeer">
                     Top Rated
                   </DropdownItem>
                   <DropdownItem divider />
@@ -159,12 +171,11 @@ class Routes extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="#allbeer">Beer</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#allcoffee">Coffee</NavLink>
-              </NavItem>
+              {adminLoggedIn &&
+                <NavItem>
+                  <NavLink href="#newestablishment">Register a New Establishment</NavLink>
+                </NavItem>
+              }
           </Nav>
         </div>
         <Switch>
@@ -184,7 +195,9 @@ class Routes extends Component {
               render={
                 (props) =>
                 <AllCoffee
+                  {...props}
                   establishments={ establishments }
+                  reviews={reviews}
                   componentDidMount={ this.componentDidMount }
                 />
               }
@@ -205,6 +218,7 @@ class Routes extends Component {
                 <SingleShop
                   {...props}
                   establishments={ establishments }
+                  reviews={ reviews }
                 />
               }
             />
@@ -226,6 +240,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <UserSignIn
+                  {...props}
                   userLoggedIn={ userLoggedIn }
                   userSignInRoute={ userSignInRoute }
                   userSignOutRoute={ userSignOutRoute }
@@ -237,6 +252,7 @@ class Routes extends Component {
               render={
                 (props) =>
                 <AdminSignIn
+                  {...props}
                   adminLoggedIn={ adminLoggedIn }
                   adminSignInRoute={ adminSignInRoute }
                   adminSignOutRoute={ adminSignOutRoute }

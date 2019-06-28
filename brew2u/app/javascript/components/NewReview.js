@@ -14,7 +14,7 @@ class NewReview extends React.Component {
     this.state = {
       attributes: {
         review: '',
-        rating: '',
+        rating: 0,
       },
       success: false
     }
@@ -37,17 +37,26 @@ class NewReview extends React.Component {
   
   render () {
     const{ success, attributes } = this.state
-    const ratingChanged = (newRating) => {
-  console.log(newRating)
-}
-
     return (
       <React.Fragment>
-        <h1>Write a Review</h1>
+        <h1><u>Write a Review</u></h1>
+        <h5>Select Your Rating</h5>
+        <ReactStars
+          count={5}
+          onChange={this.handleChange}
+          value = {attributes.rating}
+          name="rating"
+          type="integer"
+          size={24}
+          half={false}
+          color1={'red'}
+          color2={'#ffd700'}
+        />
+      { console.log(this.state.rating) }
         <FormGroup>
           <Label for="review">Review</Label>
           <Input 
-            type="textarea" rows="5" cols="50" 
+            type="textarea" rows="5" cols="10" 
             placeholder="Your review helps others learn about local coffee shops or microbreweries."
             name="review"
             onChange={this.handleChange}
@@ -55,10 +64,11 @@ class NewReview extends React.Component {
           />
         </FormGroup>
         <ReactStars
-        count={5}
-        onChange={ratingChanged}
-        size={24}
-        color2={'#ffd700'} />,
+          count={5}
+          onChange={ratingChanged}
+          size={24}
+          color2={'#ffd700'}
+        />
       
         <Button onClick={this.handleNewReview}>Post Review</Button>
 
