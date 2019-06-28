@@ -33,6 +33,13 @@
       <%= f.text_field :last_name %>
     </div>
     
+    <% if resource_name == :user %>
+      <div class="field">
+        <%= f.label :date_of_birth %><br />
+        <%= f.date_field :date_of_birth %>
+      </div>
+    <% end %>
+    
     <div class="field">
       <%= f.label :phone %><br />
       <%= f.text_field :phone %>
@@ -62,13 +69,6 @@
       <%= f.label :zip_code %><br />
       <%= f.number_field :zip %>
     </div>
-    
-    <% if resource_name == "user" %>
-    <div class="field">
-      <%= f.label :date_of_birth %><br />
-      <%= f.date_field :date_of_birth %>
-    </div>
-    <% end %>
   
     <div class="actions" id="signupBtn">
       <%= f.submit "Sign up" %>
