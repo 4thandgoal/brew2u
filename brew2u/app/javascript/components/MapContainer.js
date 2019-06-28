@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
 
-export class MapContainer extends React.Component {
+class MapContainer extends React.Component {
    constructor(props){
     super(props)
      this.state = {
@@ -27,20 +27,22 @@ export class MapContainer extends React.Component {
     }
   }
    
+   
+   
   render () {
     const mapStyles = {
       width: "50%",
       height: "50%",
     }
-
-    const { name, latitude, longitude } = this.props
-
+      
+    const { google, name, latitude, longitude } = this.props
+    console.log(this.props)
     return (
       <React.Fragment>
         <Map
-          google={this.props.google}
+          google={google}
           style={mapStyles}
-          center={{
+          initialCenter={{
             lat: {latitude},
             lng: {longitude}
           }}
@@ -53,8 +55,7 @@ export class MapContainer extends React.Component {
             title={name}
             position = {{lat: {latitude}, lng: {longitude}}}
           />
-          {console.log(name)}
-
+        
           <InfoWindow
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
@@ -70,5 +71,5 @@ export class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ("AIzaSyDSkERfUbqV1nPReiTvz2thgnd1cEgA_sk")
+  apiKey: "AIzaSyDSkERfUbqV1nPReiTvz2thgnd1cEgA_sk"
 })(MapContainer)

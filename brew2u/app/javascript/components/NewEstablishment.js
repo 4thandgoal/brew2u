@@ -178,4 +178,4 @@ class NewEstablishment extends React.Component {
   }
 }
 
-export default NewEstablishment
+export default NewEstablishment;

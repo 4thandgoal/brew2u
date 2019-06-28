@@ -1,0 +1,24 @@
+<h2 class="deviseHeading">Resend unlock instructions</h2>
+
+<div class="formWrap">
+  <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+  
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Resend unlock instructions" %>
+    </div>
+  <% end %>
+
+  <div class="loginLinkWrap">
+    <%= render "devise/shared/links" %>
+  </div>
+    
+  <div class="logoWrap">
+    <img src="https://codecopycoffee.com/wp-content/uploads/2019/06/brew2ulogo.png" alt="brew2ulogo" />
+  </div>  
+</div>

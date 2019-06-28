@@ -17,5 +17,10 @@ class Establishment < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
   
+  def average_rating
+    if reviews.length > 0
+      reviews.sum(&:rating)/reviews.length
+    end
+  end
 
 end

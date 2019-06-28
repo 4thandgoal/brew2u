@@ -7449,6 +7449,11 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
+react-geocode@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-geocode/-/react-geocode-0.1.2.tgz#9e7c8114fbd66550d32a417cf95d36fa4f1cd45f"
+  integrity sha512-XEJkEPmwufeGykul/eqJyA1WduXa3IGxJam5BA0jzYfs/KMjCrtQjJl1FcH9Cybn05oQnRVUsRW8OGwEmTER5g==
+
 react-gesture-gallery@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-gesture-gallery/-/react-gesture-gallery-1.0.0.tgz#687937ea13fac39da3441d627ce01e196199d28c"
@@ -7586,6 +7591,11 @@ react-spring@^9.0.0-beta.20:
     "@react-spring/three" "^9.0.0-beta.23"
     "@react-spring/web" "^9.0.0-beta.23"
     "@react-spring/zdog" "^9.0.0-beta.23"
+
+react-stars@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
+  integrity sha1-kRhSAY4VdKD5osHfpPC8mvBxuSE=
 
 react-style-singleton@^1.1.0:
   version "1.1.1"
