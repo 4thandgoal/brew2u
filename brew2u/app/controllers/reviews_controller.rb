@@ -30,11 +30,20 @@ class ReviewsController < ApplicationController
     private
     
     def review_params
-        params.require(:review).permit(:rating, :review)
+        params.require(:review).permit(:rating.to_i, :review)
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_review
+
         review = Review.find(params[:id])
+    end
+    
+    def set_rating
+        rating = Rating.find[params[:id]]
+    end
+    
+    def set_establishment
+      establishment = Establishment.find(params[:establishment_id])
     end
 
 end
