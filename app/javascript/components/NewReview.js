@@ -11,7 +11,7 @@ class NewReview extends React.Component {
     this.state = {
       attributes: {
         establishment_id: match.params.id,
-        rating: ''.to_i,
+        rating: '',
         review: ''
       },
       success: false

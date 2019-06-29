@@ -17,21 +17,23 @@ class AllCoffee extends React.Component {
           return shop
         }
       })
-      return coffeeShops.map(shop => {
-        return (
-          <div key={shop.id} className="shopwrapCoffee">
-            <Link to={`/singleshop/${shop.id}`} className="shoplink">
-              <h3 className="companyNameCoffee">{shop.company_name}</h3>
-              <h4>Average Rating: <Rating averageRating={ shop.average_rating } /></h4>
-              <h5 className="addressText">{shop.street_1}</h5>
-              <h5 className="addressText">{shop.street_2}</h5>
-              <h5 className="addressText">{shop.city}</h5>
-              <h5 className="addressText">{shop.state}</h5>
-              <h5 className="addressText">{shop.zip}</h5>
-              <br/>
-            </Link>
-          </div>
-        )
+      return coffeeShops
+        .sort((x, y) => y.average_rating - x.average_rating)
+        .map(shop => {
+          return (
+            <div key={shop.id} className="shopwrapCoffee">
+              <Link to={`/singleshop/${shop.id}`} className="shoplink">
+                <h3 className="companyNameCoffee">{shop.company_name}</h3>
+                <h4>Average Rating: <Rating averageRating={ shop.average_rating } /></h4>
+                <h5 className="addressText">{shop.street_1}</h5>
+                <h5 className="addressText">{shop.street_2}</h5>
+                <h5 className="addressText">{shop.city}</h5>
+                <h5 className="addressText">{shop.state}</h5>
+                <h5 className="addressText">{shop.zip}</h5>
+                <br/>
+              </Link>
+            </div>
+          )
       })
     }
     return (
