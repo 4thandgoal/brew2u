@@ -35,6 +35,8 @@ class SingleShop extends React.Component {
           <div key={review.id}>
             <h3>{review.rating}</h3>
             <p>{review.review}</p>
+            <br />
+            <br />
           </div>
         )
       })
@@ -64,10 +66,9 @@ class SingleShop extends React.Component {
             <div>
               <h4>Reviews</h4>
               <div>
-                {allReviews}
+                {allReviews()}
               </div>
             </div>
-            {allReviews()}
             <br />
             <br />
             <br />
