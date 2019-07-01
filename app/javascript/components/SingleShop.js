@@ -28,17 +28,17 @@ class SingleShop extends React.Component {
     const { shopId } = this.state
     const { establishments, reviews, userLoggedIn } = this.props
     const shop = establishments.find(shop => shop.id == shopId)
-    const review = reviews.find(review => review.establishment_id == shopId)
     const allReviews = () => {
       return reviews.map(review => {
-        return (
-          <div key={review.id}>
-            <h3>{review.rating}</h3>
-            <p>{review.review}</p>
-            <br />
-            <br />
-          </div>
-        )
+        if (review.establishment_id == shopId)
+          return (
+            <div key={review.id}>
+              <h3>{review.rating}</h3>
+              <p>{review.review}</p>
+              <br />
+              <br />
+            </div>
+          )
       })
     }
     return (
@@ -65,9 +65,16 @@ class SingleShop extends React.Component {
             <br />
             <div>
               <h4>Reviews</h4>
-              <div>
-                {allReviews()}
-              </div>
+              {reviews.length > 0 &&
+                <div>
+                  {allReviews()}
+                </div>
+              }
+              {reviews.length == 0 &&
+                <div>
+                  <h6>Be the first to leave a Review!</h6>
+                </div>
+              }
             </div>
             <br />
             <br />
