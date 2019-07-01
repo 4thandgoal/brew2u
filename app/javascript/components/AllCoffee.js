@@ -7,7 +7,10 @@ import Rating from './Rating'
 
 class AllCoffee extends React.Component {
   
-
+  componentDidMount = () => {
+    const { componentDidMount } = this.props
+    componentDidMount()
+  }
   
   render () {
     const { establishments, reviews } = this.props

@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 
 class AllBeer extends React.Component {
   
+  componentDidMount = () => {
+    const { componentDidMount } = this.props
+    componentDidMount()
+  }
+  
   render () {
     const { establishments } = this.props
     const allBreweries = () => {

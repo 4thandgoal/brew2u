@@ -1,26 +1,25 @@
 class ApplicationController < ActionController::Base
     skip_before_action :verify_authenticity_token
     
-    # before_action :configure_permitted_parameters, if: :devise_controller?
+    before_action :configure_permitted_parameters, if: :devise_controller?
     
-    # protected
+    protected
     
-    # def configure_permitted_parameters
-    #     devise_parameter_sanitizer.permit(
-    #         :sign_up,
-    #         keys:[
-    #             :first_name,
-    #             :last_name,
-    #             address_attributes:[
-    #                 :country,
-    #                 :state,
-    #                 :city,
-    #                 :area,
-    #                 :postal_code
-    #             ]
-    #         ]
-    #     )
-    # end
+    def configure_permitted_parameters
+        devise_parameter_sanitizer.permit(
+            :sign_up,
+            keys:[
+                :first_name,
+                :last_name,
+                :phone,
+                :street_1,
+                :street_2,
+                :city,
+                :state,
+                :zip
+            ]
+        )
+    end
 end
 
 
