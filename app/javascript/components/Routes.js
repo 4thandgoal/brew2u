@@ -23,7 +23,6 @@ import Landing from "./Landing";
 import MapContainer from "./MapContainer"
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
-import ShopReviews from './ShopReviews'
 import SingleShop from "./SingleShop"
 import UserSignIn from "./UserSignIn";
 import AboutUs from "./AboutUs";
@@ -212,16 +211,6 @@ class Routes extends Component {
                 (props)=>
                 <NewEstablishment
                   handleNewEstablishment={this.handleNewEstablishment}
-                />
-              }
-            />
-            <Route
-              path="/shopreviews/:id"
-              render={
-                (props) =>
-                <ShopReviews
-                  {...props}
-                  reviews={ reviews }
                 />
               }
             />
