@@ -32,30 +32,38 @@ class SingleShop extends React.Component {
       <React.Fragment>
         {shop && 
           <div>
-            <Link to={`/newreview/${shop.id}`}>Write a Review</Link>
-            <h2>{shop.company_name}</h2>
-            <h3>Average Rating: {shop.average_rating}</h3>
-            <h4>{shop.website}</h4>
-            <h4>{shop.phone}</h4>
-            <h5>{shop.street_1}</h5>
-            <h5>{shop.street_2}</h5>
-            <h5>{shop.city}</h5>
-            <h5>{shop.state}</h5>
-            <h5>{shop.zip}</h5>
-            <p>Business Hours: {shop.hours_of_operation}</p>
-            <p>{shop.pet_friendly}</p>
-            <p>{shop.wifi}</p>
+            <Link to={`/newreview/${shop.id}`} id="reviewLink">Write a Review</Link>
+            <h2 className="shopName">{shop.company_name}</h2>
+            <h3 className="shopRating">Average Rating: {shop.average_rating}</h3>
+            
+            <div className="flexContainer">
+            
+              <div className="detailsWrap">
+                <h4 className="shopWebsite"><a href="{shop.website}" target="_blank">{shop.website}</a></h4>
+                <h4 className="shopPhone">{shop.phone}</h4>
+                <h5 className="shopAddress">{shop.street_1}</h5>
+                <h5 className="shopAddress">{shop.street_2}</h5>
+                <h5 className="shopAddress">{shop.city}</h5>
+                <h5 className="shopAddress">{shop.state}</h5>
+                <h5 className="shopAddress">{shop.zip}</h5>
+                <p className="shopDetails">Business Hours: {shop.hours_of_operation}</p>
+                <p className="shopDetails">{shop.pet_friendly}</p>
+                <p className="shopDetails">{shop.wifi}</p>
+              </div>
+              
+              <div className="mapFix">
+                <MapContainer
+                  name={shop.company_name}
+                  latitude={shop.latitude}
+                  longitude={shop.longitude}
+                  rating={shop.rating}
+                />
+              </div>
+            </div>
+            
             <hr />
             <br />
             <br />
-            
-            
-            <MapContainer
-              name={shop.company_name}
-              latitude={shop.latitude}
-              longitude={shop.longitude}
-              rating={shop.rating}
-            />
             
           </div>
         }

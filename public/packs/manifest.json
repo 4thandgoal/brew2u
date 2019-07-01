@@ -1,0 +1,35 @@
+{
+  "application.js": "/packs/js/application-3b3c89748f23dfd4b55c.js",
+  "application.js.map": "/packs/js/application-3b3c89748f23dfd4b55c.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-3b3c89748f23dfd4b55c.js"
+      ],
+      "js.map": [
+        "/packs/js/application-3b3c89748f23dfd4b55c.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-fe0891eff909c66faf0b.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-fe0891eff909c66faf0b.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs/js/server_rendering-e4ddc4229beebee80872.js"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-e4ddc4229beebee80872.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-fe0891eff909c66faf0b.js",
+  "hello_react.js.map": "/packs/js/hello_react-fe0891eff909c66faf0b.js.map",
+  "media/components/brew2ulogo.png": "/packs/media/components/brew2ulogo-446df2abf309be6a941e6b5ac96ad2cf.png",
+  "server_rendering.js": "/packs/js/server_rendering-e4ddc4229beebee80872.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-e4ddc4229beebee80872.js.map"
+}
