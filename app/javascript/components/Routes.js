@@ -215,6 +215,14 @@ class Routes extends Component {
                 />
               }
             />
+            <Route 
+              path="/aboutus"
+              render={
+                (props)=>
+                <AboutUs
+              />
+              }
+            />
             <Route
               path="/shopreviews/:establishment_id"
               render={
