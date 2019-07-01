@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
             keys:[
                 :first_name,
                 :last_name,
+                :date_of_birth,
                 :phone,
                 :street_1,
                 :street_2,
