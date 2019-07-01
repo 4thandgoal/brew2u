@@ -41,6 +41,12 @@ class SingleShop extends React.Component {
           )
       })
     }
+    const checkForReviews = []
+    reviews.map(review => {
+      if (review.establishment_id == shopId) {
+        checkForReviews.push(review)
+      }
+    })
     return (
       <React.Fragment>
         {shop && 
@@ -65,12 +71,12 @@ class SingleShop extends React.Component {
             <br />
             <div>
               <h4>Reviews</h4>
-              {reviews.length > 0 &&
+              {checkForReviews.length > 0 &&
                 <div>
                   {allReviews()}
                 </div>
               }
-              {reviews.length == 0 &&
+              {checkForReviews.length == 0 &&
                 <div>
                   <h6>Be the first to leave a Review!</h6>
                 </div>
