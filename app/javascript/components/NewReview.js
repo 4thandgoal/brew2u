@@ -18,6 +18,11 @@ class NewReview extends React.Component {
     }
   }
   
+  componentDidMount = () => {
+    const { match } = this.props
+    this.setState({ establishment_id: match.params.id })
+  }
+  
   handleChange = (event) => {
     const { attributes } = this.state  
     attributes[event.target.name] = event.target.value
@@ -67,7 +72,7 @@ class NewReview extends React.Component {
         <Button onClick={this.handleNewReview}>Post Review</Button>
 
         {success &&
-          <Redirect to="/singleshop/" />
+          <Redirect to={`/singleshop/${attributes.establishment_id}`} />
         }
       </React.Fragment>
     );
