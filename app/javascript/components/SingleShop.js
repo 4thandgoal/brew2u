@@ -26,8 +26,27 @@ class SingleShop extends React.Component {
   
   render () {
     const { shopId } = this.state
-    const { establishments, userLoggedIn } = this.props
+    const { establishments, reviews, userLoggedIn } = this.props
     const shop = establishments.find(shop => shop.id == shopId)
+    const allReviews = () => {
+      return reviews.map(review => {
+        if (review.establishment_id == shopId)
+          return (
+            <div key={review.id}>
+              <h3>{review.rating}</h3>
+              <p>{review.review}</p>
+              <br />
+              <br />
+            </div>
+          )
+      })
+    }
+    const checkForReviews = []
+    reviews.map(review => {
+      if (review.establishment_id == shopId) {
+        checkForReviews.push(review)
+      }
+    })
     return (
       <React.Fragment>
         {shop && 
@@ -50,15 +69,29 @@ class SingleShop extends React.Component {
             <hr />
             <br />
             <br />
-            
-            
+            <div>
+              <h4>Reviews</h4>
+              {checkForReviews.length > 0 &&
+                <div>
+                  {allReviews()}
+                </div>
+              }
+              {checkForReviews.length == 0 &&
+                <div>
+                  <h6>Be the first to leave a Review!</h6>
+                </div>
+              }
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
             <MapContainer
               name={shop.company_name}
               latitude={shop.latitude}
               longitude={shop.longitude}
               rating={shop.average_rating}
             />
-            
           </div>
         }
       </React.Fragment>

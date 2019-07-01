@@ -6,10 +6,6 @@ class Review < ApplicationRecord
   validates :rating, length: {minimum: 1, maximum: 5}
   validates :review, length: {maximum: 300}
   
-  def self.leppard
-    rating.to_i
-  end
-  
 end
 
 
