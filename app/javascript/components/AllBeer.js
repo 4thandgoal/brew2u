@@ -18,7 +18,9 @@ class AllBeer extends React.Component {
           return shop
         }
       })
-      return beers.map(beer=>{
+      return beers
+        .sort((x, y) => y.average_rating - x.average_rating)
+        .map(beer=>{
           return (
             <div key={beer.id} className="shopwrapBeer">
               <Link to={`/singleshop/${beer.id}`} className="shoplink">

@@ -216,7 +216,7 @@ class Routes extends Component {
               }
             />
             <Route
-              path="/shopreviews/:establishment_id"
+              path="/shopreviews/:id"
               render={
                 (props) =>
                 <ShopReviews
@@ -231,6 +231,7 @@ class Routes extends Component {
                 (props) =>
                 <SingleShop
                   {...props}
+                  componentDidMount={ this.componentDidMount }
                   establishments={ establishments }
                   reviews={ reviews }
                   userLoggedIn={ userLoggedIn }
@@ -238,7 +239,7 @@ class Routes extends Component {
               }
             />
             <Route 
-              path="/newreview/:establishment_id"
+              path="/newreview/:id"
               render={
                 (props)=>
                 <NewReview
