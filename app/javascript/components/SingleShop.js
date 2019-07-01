@@ -32,13 +32,9 @@ class SingleShop extends React.Component {
     const allReviews = () => {
       return reviews.map(review => {
         return (
-          <div>
-            <div key={review.id}>
-              <h3>{review.rating}</h3>
-              <p>{review.review}</p>
-              <br />
-              <br />
-            </div>
+          <div key={review.id}>
+            <h3>{review.rating}</h3>
+            <p>{review.review}</p>
           </div>
         )
       })
@@ -71,7 +67,17 @@ class SingleShop extends React.Component {
                 {allReviews}
               </div>
             </div>
-            
+            {allReviews()}
+            <br />
+            <br />
+            <br />
+            <br />
+            <MapContainer
+              name={shop.company_name}
+              latitude={shop.latitude}
+              longitude={shop.longitude}
+              rating={shop.average_rating}
+            />
           </div>
         }
       </React.Fragment>
