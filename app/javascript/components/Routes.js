@@ -23,7 +23,6 @@ import Landing from "./Landing";
 import MapContainer from "./MapContainer"
 import NewEstablishment from "./NewEstablishment"
 import NewReview from "./NewReview"
-import ShopReviews from './ShopReviews'
 import SingleShop from "./SingleShop"
 import UserSignIn from "./UserSignIn";
 import AboutUs from "./AboutUs";
@@ -224,21 +223,12 @@ class Routes extends Component {
               }
             />
             <Route
-              path="/shopreviews/:establishment_id"
-              render={
-                (props) =>
-                <ShopReviews
-                  {...props}
-                  reviews={ reviews }
-                />
-              }
-            />
-            <Route
               path="/singleshop/:id"
               render={
                 (props) =>
                 <SingleShop
                   {...props}
+                  componentDidMount={ this.componentDidMount }
                   establishments={ establishments }
                   reviews={ reviews }
                   userLoggedIn={ userLoggedIn }
@@ -246,7 +236,7 @@ class Routes extends Component {
               }
             />
             <Route 
-              path="/newreview/:establishment_id"
+              path="/newreview/:id"
               render={
                 (props)=>
                 <NewReview
