@@ -42,13 +42,15 @@ class NewReview extends React.Component {
     const { success, attributes } = this.state
     return (
       <React.Fragment>
-        <h1>Write a Review</h1>
-        <h5>Select Your Rating</h5>
+      <div className="signwrapper">
+        <h1 className="reviewHeading">Write a Review</h1>
+        <h5 className="reviewHeading">Select Your Rating</h5>
         <Input
           type="select"
           name="rating"
           onChange={this.handleChange}
           value={attributes.rating}
+          id="ratingArea"
         >
           <option></option>
           <option>1</option>
@@ -58,7 +60,9 @@ class NewReview extends React.Component {
           <option>5</option>
         </Input>
         <FormGroup>
-          <Label for="review">Review</Label>
+        <div className="alignfix">
+          <Label for="review" id="reviewLabel">Review</Label>
+        </div>
           <Input 
             type="textarea"
             rows="5"
@@ -67,13 +71,17 @@ class NewReview extends React.Component {
             name="review"
             onChange={this.handleChange}
             value = {attributes.review}
+            id="reviewTextArea"
           />
         </FormGroup>
-        <Button onClick={this.handleNewReview}>Post Review</Button>
+        <div id="submitReviewBtnWrap">
+        <Button onClick={this.handleNewReview} id="submitReviewBtn">Post Review</Button>
+        </div>
 
         {success &&
           <Redirect to={`/singleshop/${attributes.establishment_id}`} />
         }
+        </div>
       </React.Fragment>
     );
   }
