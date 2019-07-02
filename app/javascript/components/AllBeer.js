@@ -25,7 +25,7 @@ class AllBeer extends React.Component {
             <div key={beer.id} className="shopwrapBeer">
               <Link to={`/singleshop/${beer.id}`} className="shoplink">
                 <h3 className="companyNameBeer">{beer.company_name}</h3>
-                <h4>Average Rating: <Rating averageRating={ beer.average_rating } /></h4>
+                <h4 className="avgRating">Average Rating: <Rating averageRating={ beer.average_rating } /></h4>
                 <h5 className="addressText">{beer.street_1}</h5>
                 <h5 className="addressText">{beer.street_2}</h5>
                 <h5 className="addressText">{`${beer.city}, ${beer.state} ${beer.zip}`}</h5>
