@@ -31,7 +31,6 @@ footer {
     height: 80px;
     background-color: #EBEBEB;
     bottom: 0;
-    margin-top: 10px;
 }
 
 .footerp {
@@ -218,7 +217,7 @@ background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
 }
 
-#userloginbtn:hover, #signupBtn:hover, #resetpwBtn:hover, #changepwBtn:hover, .estBtnWrap:hover {
+#userloginbtn:hover, #signupBtn:hover, #resetpwBtn:hover, #changepwBtn:hover, .estBtnWrap:hover, .reviewLinkWrap:hover, #submitReviewBtnWrap:hover {
     background: rgba(255,0,0,1);
 background: -moz-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
 background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,0,0,1)), color-stop(100%, rgba(0,0,255,1)));
@@ -387,19 +386,202 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
 }
 
 #cancelBtn {
+    display: inline;
     top: 0;
     width: max-content;
+    padding: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: red;
     border: 3px solid red;
     background-color: white;
+    margin-top: 5px;
+    margin-left: 3px;
     font-size: 1.3em;
+    display: inline;
     text-decoration: none;
     border-radius: 3px;
+}
+
+#cancelBtn:hover {
+    box-shadow: 0 0 5px 3px solid red;
+}
+
+.cancelBtnWrap {
+    width: max-content;
+    margin-top: 10px;
     display: inline;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    width: 100px;
+}
+
+.shopName {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.shopPhone {
+    margin-bottom: 15px;
+}
+
+.shopRating {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.shopWebsite {
+    text-align: center;
+}
+
+.shopPhone {
+    text-align: center;
+}
+
+.shopAddress {
+    margin: 0;
+}
+
+.shopDetails {
+    margin: 0;
+}
+
+.flexContainer {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+
+}
+
+.detailsWrap {
+    border: 3px dotted blue;
+    padding: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.carouselWrap {
+    overflow: hidden;
+    background-color: black;
+    align-self: end;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.mapWrap {
+    grid-column-start: 3;
+}
+
+.mapWrap div div {
+    width: 33% !important;
+    height: 48% !important;
+}
+
+.mapWrap div div div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#aboutLink {
+    display: inline;
+    width: max-content;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 4px;
+    transition: ease-in-out .2s;
+    color: black;
+}
+
+#aboutLink:hover {
+    text-decoration: none;
+    text-shadow: 0 0 10px black;
+    color: white;
+}
+
+.reviewLinkWrap {
+    display: inline;
+    float: right;
+    margin-right: 15px;
+    width: 136px;
+    height: 33px;
+    padding-top: 4px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+#reviewLink {
+    width: max-content;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: white;
+    margin-left: 4px;
+    padding: 2px;
+}
+
+#reviewLink:hover {
+    text-decoration: none;
+}
+
+.reviewHeading {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.reviewText {
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#reviewLabel {
+    font-size: 1.25rem;
+}
+
+.alignfix {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#reviewTextArea, #ratingArea {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #333;
+}
+
+#submitReviewBtn {
+    width: max-content;
+    padding: 3px;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 1.2em;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+#submitReviewBtnWrap {
+    width: 120px;
+    height: 46px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
 }
 
