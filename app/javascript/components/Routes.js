@@ -173,7 +173,7 @@ class Routes extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-              <NavLink href="#aboutus">About Us</NavLink>
+              <NavLink href="#aboutus" id="aboutLink">About Us</NavLink>
               </NavItem>
               {adminLoggedIn &&
                 <NavItem>
