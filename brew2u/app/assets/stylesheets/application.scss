@@ -425,17 +425,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
     margin: 0 auto;
 }
 
+.shopPhone {
+    margin-bottom: 15px;
+}
+
 .shopRating {
     width: max-content;
     margin: 0 auto;
-}
-
-.flexContainer {
-    display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    justify-content: space-evenly;
-    max-width: 100%;
+    margin-bottom: 25px;
 }
 
 .shopWebsite {
@@ -446,6 +443,52 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
     text-align: center;
 }
 
-.mapFix {
-    width: 30%;
+.shopAddress {
+    margin: 0;
 }
+
+.shopDetails {
+    margin: 0;
+}
+
+.flexContainer {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+
+}
+
+.detailsWrap {
+    border: 3px dotted blue;
+    padding: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.carouselWrap {
+    overflow: hidden;
+    background-color: black;
+    align-self: end;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.mapWrap {
+    grid-column-start: 3;
+}
+
+.mapWrap div div {
+    width: 33% !important;
+    height: 48% !important;
+}
+
+.mapWrap div div div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
