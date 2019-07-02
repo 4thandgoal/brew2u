@@ -143,12 +143,12 @@ class SingleShop extends React.Component {
                 <p className="shopDetails">Wifi? {shop.wifi}</p>
               </div>
 
-              <div className="mapWrap">
+              <div>
                  <MapContainer
                   name={shop.company_name}
                   latitude={shop.latitude}
                   longitude={shop.longitude}
-                  rating={shop.rating}
+                  rating={shop.average_rating}
                 />
               </div>  
         
