@@ -75,8 +75,5 @@ test:
 #
 # You can use this database configuration with:
 #
-production:
-  <<: *default
-  database: brew2u_development
-#  url: <%= ENV['DATABASE_URL'] %>
-
+  # production:
+  #   url: <%= ENV['DATABASE_URL'] %>

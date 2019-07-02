@@ -1,4 +1,3 @@
-
   [1m[35m (532.9ms)[0m  [1m[35mCREATE DATABASE "brew2u_development" ENCODING = 'unicode'[0m
   ↳ /home/ubuntu/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (245.1ms)[0m  [1m[35mCREATE DATABASE "brew2u_test" ENCODING = 'unicode'[0m
@@ -320,27 +319,23 @@ Completed 200 OK in 10070ms (Views: 10068.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 22:26:02 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (0.9ms)
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
-
 
 Completed 200 OK in 9895ms (Views: 9894.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 22:27:41 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (0.9ms)
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
-
 
 Completed 200 OK in 10093ms (Views: 10092.4ms | ActiveRecord: 0.0ms)
 
@@ -370,14 +365,12 @@ Completed 200 OK in 9480ms (Views: 9479.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 22:40:03 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (0.9ms)
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
-
 
 Completed 200 OK in 10097ms (Views: 10096.1ms | ActiveRecord: 0.0ms)
 
@@ -394,7 +387,6 @@ Completed 200 OK in 9932ms (Views: 9931.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 22:42:53 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -402,19 +394,16 @@ Processing by PagesController#index as HTML
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
 
-
 Completed 200 OK in 9790ms (Views: 9789.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 22:44:14 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (0.9ms)
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
-
 
 Completed 200 OK in 9517ms (Views: 9515.8ms | ActiveRecord: 0.0ms)
 
@@ -457,14 +446,12 @@ Completed 200 OK in 10786ms (Views: 10780.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 22:58:33 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (0.9ms)
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
-
 
 Completed 200 OK in 9300ms (Views: 9299.3ms | ActiveRecord: 0.0ms)
 
@@ -503,7 +490,6 @@ Completed 200 OK in 9604ms (Views: 9603.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 23:08:09 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -511,12 +497,10 @@ Processing by PagesController#index as HTML
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
 
-
 Completed 200 OK in 9838ms (Views: 9837.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 23:09:12 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -539,14 +523,12 @@ Completed 200 OK in 9726ms (Views: 9725.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 12.46.197.130 at 2019-06-20 23:14:47 +0000
-
 Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
   Rendered pages/index.html.erb within layouts/application (0.9ms)
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
-
 
 Completed 200 OK in 9717ms (Views: 9716.4ms | ActiveRecord: 0.0ms)
 
@@ -7926,7 +7908,6 @@ Processing by PagesController#index as HTML
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
 
-
 Completed 200 OK in 11979ms (Views: 11978.2ms | ActiveRecord: 0.0ms)
 
 
@@ -8212,7 +8193,6 @@ Processing by PagesController#index as HTML
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
 
-
 Completed 200 OK in 11213ms (Views: 11211.8ms | ActiveRecord: 0.0ms)
 
 
@@ -8443,7 +8423,6 @@ Processing by PagesController#index as HTML
 [Webpacker] Compiling…
 [Webpacker] Compilation failed:
 
-
 Completed 200 OK in 10610ms (Views: 10609.1ms | ActiveRecord: 0.0ms)
 
 
@@ -8516,7 +8495,6 @@ Processing by ReviewsController#index as JSON
 Processing by EstablishmentsController#index as JSON
   [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
   ↳ app/controllers/establishments_controller.rb:8
-
   [1m[36mReview Load (3.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
   ↳ app/controllers/reviews_controller.rb:8
 Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 3.8ms)
@@ -8919,7 +8897,6 @@ Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.
 Processing by ReviewsController#index as JSON
   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
   ↳ app/controllers/reviews_controller.rb:8
-
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
 
 
