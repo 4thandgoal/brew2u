@@ -172,6 +172,9 @@ class Routes extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+              <NavLink href="#aboutus">About Us</NavLink>
+              </NavItem>
               {adminLoggedIn &&
                 <NavItem>
                   <NavLink href="#newestablishment" id="registerEstLink">
@@ -212,6 +215,14 @@ class Routes extends Component {
                 <NewEstablishment
                   handleNewEstablishment={this.handleNewEstablishment}
                 />
+              }
+            />
+            <Route 
+              path="/aboutus"
+              render={
+                (props)=>
+                <AboutUs
+              />
               }
             />
             <Route

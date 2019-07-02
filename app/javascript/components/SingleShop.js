@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MapContainer from "./MapContainer"
-import ShopReviews from './ShopReviews'
 import { Link } from 'react-router-dom';
 import { 
   NavItem, 
