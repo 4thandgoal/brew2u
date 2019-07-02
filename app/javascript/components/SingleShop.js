@@ -31,15 +31,18 @@ class SingleShop extends React.Component {
     super(props)
     const { match } = this.props
     this.state = {
-      shopId: match.params.id,
-      reviews: [],
-      activeIndex: 0
+      shopId: match.params.id
     }
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+  }
+  
+  componentDidMount = () => {
+    const { componentDidMount } = this.props
+    componentDidMount()
   }
   
   componentDidUpdate = prevProps => {
