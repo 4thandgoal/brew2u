@@ -30,10 +30,7 @@ class AllCoffee extends React.Component {
                 <h4 className="avgRating">Average Rating: <Rating averageRating={ shop.average_rating } /></h4>
                 <h5 className="addressText">{shop.street_1}</h5>
                 <h5 className="addressText">{shop.street_2}</h5>
-                <h5 className="addressText">{shop.city}</h5>
-                <h5 className="addressText">{shop.state}</h5>
-                <h5 className="addressText">{shop.zip}</h5>
-                <br/>
+                <h5 className="addressText">{`${shop.city}, ${shop.state} ${shop.zip}`}</h5>
               </Link>
             </div>
           )

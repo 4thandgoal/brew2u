@@ -115,6 +115,7 @@ class SingleShop extends React.Component {
             {userLoggedIn &&
               <div className="reviewLinkWrap"><Link to={`/newreview/${shop.id}`} id="reviewLink">Write a Review</Link></div>
             }
+
             <h2 className="shopName">{shop.company_name}</h2>
             <h3 className="shopRating">Average Rating: {shop.average_rating}</h3>
             
@@ -136,9 +137,7 @@ class SingleShop extends React.Component {
                 <h4 className="shopPhone">{shop.phone}</h4>
                 <h5 className="shopAddress">{shop.street_1}</h5>
                 <h5 className="shopAddress">{shop.street_2}</h5>
-                <h5 className="shopAddress">{shop.city}</h5>
-                <h5 className="shopAddress">{shop.state}</h5>
-                <h5 className="shopAddress">{shop.zip}</h5>
+                <h5 className="shopAddress">{`${shop.city}, ${shop.state} ${shop.zip}`}</h5>
                 <p className="shopDetails">Business Hours: {shop.hours_of_operation}</p>
                 <p className="shopDetails">Pet-Friendly? {shop.pet_friendly}</p>
                 <p className="shopDetails">Wifi? {shop.wifi}</p>

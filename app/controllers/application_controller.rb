@@ -3,6 +3,15 @@ class ApplicationController < ActionController::Base
     
     before_action :configure_permitted_parameters, if: :devise_controller?
     
+    def edit
+        session[:return_to] ||= request.referer
+        redirect_to session.delete(:return_to)
+    end
+    
+    def update
+        
+    end
+    
     protected
     
     def configure_permitted_parameters
