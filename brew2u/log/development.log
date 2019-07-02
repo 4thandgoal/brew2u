@@ -1,0 +1,1883 @@
+Started GET "/" for 12.46.197.130 at 2019-07-01 21:26:24 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.6ms)
+[Webpacker] Compiling…
+Started GET "/" for 12.46.197.130 at 2019-07-01 21:26:45 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 63734ms (Views: 63726.3ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 42131ms (Views: 42129.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 21:27:33 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12286ms (Views: 12284.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 21:27:47 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 21:27:47 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+Processing by EstablishmentsController#index as JSON
+  [1m[36mReview Load (9.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+  [1m[36mEstablishment Load (11.2ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Completed 200 OK in 53ms (Views: 2.9ms | ActiveRecord: 18.0ms)
+
+
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 126ms (Views: 0.1ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:19:02 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 13873ms (Views: 13865.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:19:37 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11809ms (Views: 11808.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:19:53 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:19:53 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (14.8ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (8.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 44ms (Views: 2.4ms | ActiveRecord: 38.5ms)
+
+
+  [1m[36mReview Load (8.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 109ms (Views: 0.1ms | ActiveRecord: 51.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:41:30 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12219ms (Views: 12216.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:41:47 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11617ms (Views: 11616.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:46:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11457ms (Views: 11456.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:46:24 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:46:24 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (11.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Processing by EstablishmentsController#index as JSON
+Completed 200 OK in 38ms (Views: 2.2ms | ActiveRecord: 32.3ms)
+
+
+  [1m[36mEstablishment Load (3.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (7.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:46:24 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10647ms (Views: 10646.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:47:41 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11266ms (Views: 11264.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:47:56 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:47:56 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (5.1ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (15.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 24ms (Views: 3.3ms | ActiveRecord: 15.1ms)
+
+
+  [1m[36mReview Load (2.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:47:56 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10683ms (Views: 10682.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:49:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14990ms (Views: 14989.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:50:05 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:50:05 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (7.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:50:05 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10925ms (Views: 10923.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:52:49 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12911ms (Views: 12910.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:53:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:53:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (5.2ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 48ms (Views: 0.1ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:54:04 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12322ms (Views: 12321.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:54:19 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:54:19 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (6.7ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:55:54 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12201ms (Views: 12200.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:56:08 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:56:08 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (5.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 22:59:12 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12189ms (Views: 12188.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 22:59:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 22:59:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (9.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:00:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12458ms (Views: 12456.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:00:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:00:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (7.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:01:09 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10421ms (Views: 10420.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:01:21 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:01:21 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (7.0ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:03:34 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12024ms (Views: 12022.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:03:48 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:03:48 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (5.0ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:05:08 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12207ms (Views: 12206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:05:21 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:05:21 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mEstablishment Load (7.1ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:06:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12261ms (Views: 12259.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:06:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:06:25 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (5.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:06:34 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10635ms (Views: 10634.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:06:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:06:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mEstablishment Load (7.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:07:18 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12119ms (Views: 12117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:07:31 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:07:31 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mEstablishment Load (6.8ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:07:38 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10615ms (Views: 10613.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:07:50 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:07:50 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (8.1ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:10:34 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 13004ms (Views: 13002.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:10:49 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:10:49 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (6.5ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (3.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 3.3ms)
+
+
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 98ms (Views: 0.1ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:12:17 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 13592ms (Views: 13590.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:12:32 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:12:32 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (5.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 37ms (Views: 0.2ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:13:19 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12780ms (Views: 12779.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:13:33 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:13:33 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (5.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:15:15 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11561ms (Views: 11560.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:15:28 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:15:28 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mEstablishment Load (7.1ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:17:03 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12527ms (Views: 12526.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:17:18 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:17:18 +0000
+  ↳ app/models/establishment.rb:21
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:19:26 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12373ms (Views: 12372.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:19:41 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:19:41 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (7.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:20:59 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12326ms (Views: 12324.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:21:15 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.8ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:21:15 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (5.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:22:00 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12249ms (Views: 12248.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:22:14 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:22:14 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mEstablishment Load (7.1ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:22:32 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12233ms (Views: 12231.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:22:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:22:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (8.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:23:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12179ms (Views: 12178.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:23:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:23:25 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (5.8ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:23:54 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 13119ms (Views: 13118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:24:09 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:24:09 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (4.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:24:50 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12142ms (Views: 12140.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:25:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:25:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.3ms)
+
+
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (6.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (6.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:25:57 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12340ms (Views: 12339.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:26:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:26:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (4.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:26:30 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12300ms (Views: 12298.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:26:43 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:26:43 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+Processing by EstablishmentsController#index as JSON
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mEstablishment Load (3.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:27:52 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12351ms (Views: 12350.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:28:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (1.1ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:28:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (10.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:35:23 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12096ms (Views: 12094.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:35:39 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:35:39 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mEstablishment Load (5.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (4.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 10.4ms)
+
+
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:40:05 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12387ms (Views: 12385.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:40:29 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:40:29 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mEstablishment Load (5.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:42:07 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12500ms (Views: 12498.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:42:28 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:42:28 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mEstablishment Load (6.0ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:44:41 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12558ms (Views: 12557.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:45:00 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:45:00 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (4.7ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:50:19 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12883ms (Views: 12882.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:50:44 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:50:44 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+  [1m[36mEstablishment Load (5.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Completed 200 OK in 34ms (Views: 2.3ms | ActiveRecord: 28.8ms)
+
+
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 75ms (Views: 0.1ms | ActiveRecord: 40.9ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:51:27 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12200ms (Views: 12199.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:51:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:51:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mReview Load (4.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:52:24 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10646ms (Views: 10645.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:52:38 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:52:38 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (7.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-01 23:58:06 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12316ms (Views: 12315.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-01 23:58:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-01 23:58:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+Processing by EstablishmentsController#index as JSON
+  [1m[36mReview Load (5.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 6.8ms)
+
+
+  [1m[36mEstablishment Load (5.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 00:00:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12279ms (Views: 12278.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 00:01:09 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 00:01:09 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (4.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 00:04:59 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12318ms (Views: 12317.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 00:05:16 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 00:05:16 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (6.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 00:21:01 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12050ms (Views: 12049.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 00:21:16 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 00:21:16 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (1.8ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:28:51 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 16085ms (Views: 16066.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:29:07 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11955ms (Views: 11954.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:29:20 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:29:20 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (18.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (14.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 24ms (Views: 2.4ms | ActiveRecord: 19.1ms)
+
+
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 90ms (Views: 0.2ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:30:42 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 16975ms (Views: 16972.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:31:00 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:31:00 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (6.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:32:20 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14265ms (Views: 14264.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:32:36 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:32:36 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (5.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:33:42 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14091ms (Views: 14090.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:33:58 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:33:58 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (5.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mReview Load (6.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:35:01 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14374ms (Views: 14372.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:35:18 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:35:18 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (8.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:44:22 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14142ms (Views: 14141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:44:38 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:44:38 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mEstablishment Load (4.6ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:45:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14298ms (Views: 14297.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:45:26 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:45:26 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (5.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:52:46 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "...erflow: hidden;": expected "}", was "!important"
+        on line 472 of app/assets/stylesheets/application.scss
+>>     overflow: hidden; !important
+
+   ---------------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:472
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___543904554408832366_69933689303980'
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:53:05 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 13019ms (Views: 13017.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:53:20 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:53:20 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+
+
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.5ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:54:38 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 11818ms (Views: 11817.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:54:51 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:54:51 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+  [1m[36mEstablishment Load (8.5ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+Completed 200 OK in 21ms (Views: 2.4ms | ActiveRecord: 12.8ms)
+
+
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 73ms (Views: 0.1ms | ActiveRecord: 46.2ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 15:57:09 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12752ms (Views: 12750.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 15:57:23 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 15:57:23 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (6.4ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mReview Load (4.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:23:27 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12769ms (Views: 12768.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:23:41 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:23:41 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mEstablishment Load (13.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 14.3ms)
+
+
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:23:55 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 14435ms (Views: 14433.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:24:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:24:11 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (6.9ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:25:02 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10962ms (Views: 10961.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:25:14 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:25:14 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mReview Load (5.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:25:48 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 13699ms (Views: 13693.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:26:02 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 10694ms (Views: 10692.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:26:14 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:26:14 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mEstablishment Load (8.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (25.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 40ms (Views: 5.5ms | ActiveRecord: 25.6ms)
+
+
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 69ms (Views: 0.1ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:27:19 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 15189ms (Views: 15187.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:27:35 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+  [1m[36mEstablishment Load (0.3ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:27:35 +0000
+  ↳ app/controllers/establishments_controller.rb:8
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (5.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:29:47 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12353ms (Views: 12352.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:30:02 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:30:02 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (6.0ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 12.46.197.130 at 2019-07-02 16:32:30 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Completed 200 OK in 12235ms (Views: 12234.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/establishments.json" for 12.46.197.130 at 2019-07-02 16:32:44 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EstablishmentsController#index as JSON
+Started GET "/reviews.json" for 12.46.197.130 at 2019-07-02 16:32:44 +0000
+Cannot render console from 12.46.197.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as JSON
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mEstablishment Load (7.5ms)[0m  [1m[34mSELECT "establishments".* FROM "establishments"[0m
+  ↳ app/controllers/establishments_controller.rb:8
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."establishment_id" = $1[0m  [["establishment_id", 1]]
+  ↳ app/models/establishment.rb:21
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 7.8ms)
+
+

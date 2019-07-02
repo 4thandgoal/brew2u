@@ -1,0 +1,404 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+
+
+h1, h2 {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #EBEBEB;
+    bottom: 0;
+    margin-top: 10px;
+}
+
+.footerp {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.carousel-item img {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+}
+
+.carousel-control-prev-icon {
+    background-color: blue;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0 0 3px 3px blue;
+}
+
+.carousel-control-next-icon {
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0 0 3px 3px red;
+}
+
+.logo {
+    height: 80px;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    color: #EBEBEB;
+    height: 80px;
+    padding: 0;
+}
+
+#logintext, #logouttext {
+    padding-right: 50px;
+    font-size: 1.3em;
+}
+
+#beerlink {
+    width: 150px;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #333;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+}
+
+#beerlink:hover {
+    margin-left: 25px;   
+}
+
+#coffeelink {
+    width: 150px;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #333;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+}
+
+#coffeelink:hover {
+    margin-left: 25px;
+}
+
+#coffeeshopslink {
+    text-decoration: none;
+    font-size: 1.2em;
+    width: max-content;
+    color: blue;
+    font-weight: bold;
+    transition: ease-in-out .2s;
+}
+
+#brewerieslink {
+    text-decoration: none;
+    font-size: 1.2em;
+    width: max-content;
+    color: red;
+    font-weight: bold;
+    transition: ease-in-out .2s;
+}
+
+#coffeeshopslink:hover {
+    text-shadow: 0 0 10px blue;
+    color: white;
+}
+
+#brewerieslink:hover {
+    text-shadow: 0 0 10px red; 
+    color: white;
+}
+
+#registerEstLink {
+    font-weight: bold;
+    text-decoration: none;
+    width: max-content;
+    padding: 4px;
+    border: 3px solid blue;
+    background-color: white;
+    color: red;
+    margin-left: 15px;
+    margin-top: 5px;
+    border-radius: 3px;
+    transition: ease-in-out .2s;
+}
+
+#registerEstLink:hover {
+    text-decoration: none;
+    color: blue;
+    border: 3px solid red;
+}
+
+.logtext {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.centerdiv {
+    margin: 0 auto;
+    width: max-content;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.signwrapper {
+    min-height: 500px;
+}
+
+.deviseHeading {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formWrap {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.loginLinkWrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logoWrap img {
+   height: 100px; 
+}
+
+.logoWrap {
+    width: max-content;
+    margin: 0 auto;
+}
+
+#userloginbtn {
+    width: 65px;
+    height: 35px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+#userloginbtn:hover, #signupBtn:hover, #resetpwBtn:hover, #changepwBtn:hover, .estBtnWrap:hover {
+    background: rgba(255,0,0,1);
+background: -moz-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,0,0,1)), color-stop(100%, rgba(0,0,255,1)));
+background: -webkit-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+background: linear-gradient(135deg, rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#0000ff', GradientType=1 );
+}
+
+.actions input {
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.field input {
+    border: 2px solid #333;
+}
+
+#signupBtn {
+    margin-top: 15px;
+    height: 35px;
+    width: 77px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+#resetpwBtn {
+    width: 290px;
+    height: 35px;
+    margin-top: 15px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+#changepwBtn {
+    width: 200px;
+    height: 35px;
+    margin-top: 15px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+.shoplink {
+    text-decoration: none;
+}
+
+.shoplink:hover {
+    text-decoration: none;
+}
+
+.companyNameCoffee {
+    font-weight: bold;
+    color: blue;
+    transition: ease-in-out .2s;
+}
+
+.companyNameCoffee:hover {
+    text-shadow: 0 0 10px red;
+}
+
+.shopwrapCoffee {
+    width: 60%;
+    margin-left: 20%;
+    border: 3px double red;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.addressText {
+    color: black;
+}
+
+.companyNameBeer {
+    font-weight: bold;
+    color: red;
+    transition: ease-in-out .2s;
+}
+
+.companyNameCoffee:hover {
+    text-shadow: 0 0 10px blue;
+}
+
+.shopwrapBeer {
+    width: 60%;
+    margin-left: 20%;
+    border: 3px double blue;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#formInput1, #formInput2, #formInput3, #formInput4, #formInput5, #formInput6, #formInput7, #formInput8, #formInput9, #formInput10, #formInput11, #formInput12 {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #333;
+}
+
+.formLabel {
+    width: max-content;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#newEstBtn {
+    width: max-content;
+    padding: 3px;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 3px;
+    margin-left: 3px;
+    font-size: 1.3em;
+}
+
+.estBtnWrap {
+    height: 45px;
+    width: 59px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-right: 20px;
+    transition: ease-in-out .3s;
+    background: rgba(0,0,255,1);
+background: -moz-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(255,0,0,1)));
+background: -webkit-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+background: linear-gradient(135deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ff0000', GradientType=1 );
+}
+
+.buttonContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#cancelBtn {
+    top: 0;
+    width: max-content;
+    color: red;
+    border: 3px solid red;
+    background-color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100px;
+}
