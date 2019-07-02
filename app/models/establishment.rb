@@ -19,7 +19,7 @@ class Establishment < ApplicationRecord
   
   def average_rating
     if reviews.length > 0
-      reviews.sum(&:rating)/reviews.length
+      (reviews.sum(&:rating)/reviews.length).round(1)
     end
   end
 
