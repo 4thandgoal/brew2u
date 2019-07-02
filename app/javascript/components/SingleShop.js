@@ -63,9 +63,7 @@ class SingleShop extends React.Component {
             <h4>{shop.phone}</h4>
             <h5>{shop.street_1}</h5>
             <h5>{shop.street_2}</h5>
-            <h5>{shop.city}</h5>
-            <h5>{shop.state}</h5>
-            <h5>{shop.zip}</h5>
+            <h5>{`${shop.city}, ${shop.state} ${shop.zip}`}</h5>
             <p>Business Hours: {shop.hours_of_operation}</p>
             <p>{shop.pet_friendly}</p>
             <p>{shop.wifi}</p>
