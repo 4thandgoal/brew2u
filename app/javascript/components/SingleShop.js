@@ -139,8 +139,6 @@ class SingleShop extends React.Component {
                 <h5 className="shopAddress">{shop.street_2}</h5>
                 <h5 className="shopAddress">{`${shop.city}, ${shop.state} ${shop.zip}`}</h5>
                 <p className="shopDetails">Business Hours: {shop.hours_of_operation}</p>
-                <p className="shopDetails">Pet-Friendly? {shop.pet_friendly}</p>
-                <p className="shopDetails">Wifi? {shop.wifi}</p>
               </div>
 
               <div>
