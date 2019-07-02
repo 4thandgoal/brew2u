@@ -6,6 +6,7 @@ import Mike from "./mikeAcio.jpg"
 import Joel from "./joelMagsalin.jpg"
 import Gina from "./ginaVerrastro.jpg"
 import Sunil from "./sunilK.jpg"
+// added pictures to Components folder instead of routing as images to html.erb file - brute force
 
 class AboutUs extends React.Component {
     render () {
