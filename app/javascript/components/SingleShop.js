@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MapContainer from "./MapContainer"
-import ShopReviews from './ShopReviews'
 import { Link } from 'react-router-dom';
 import { NavItem, NavLink } from 'reactstrap';
 
@@ -28,10 +27,21 @@ class SingleShop extends React.Component {
     }
   }
   
+   
+    
+  
   render () {
     const { shopId } = this.state
     const { establishments, reviews, userLoggedIn } = this.props
     const shop = establishments.find(shop => shop.id == shopId)
+    const place = establishments.map(place => {
+      if (place.id == shopId) {
+        return place
+      }
+    })
+    // const address = `${place.street_1}, ${place.city}, ${place.state}, ${place.zip}`
+    
+   
     const allReviews = () => {
       return reviews.map(review => {
         if (review.establishment_id == shopId)
@@ -64,9 +74,9 @@ class SingleShop extends React.Component {
             <h4>{shop.phone}</h4>
             <h5>{shop.street_1}</h5>
             <h5>{shop.street_2}</h5>
-            <h5>{shop.city}</h5>
-            <h5>{shop.state}</h5>
-            <h5>{shop.zip}</h5>
+            <h5>{shop.city}, {shop.state} {shop.zip}</h5>
+            <h5></h5>
+            <h5></h5>
             <p>Business Hours: {shop.hours_of_operation}</p>
             <p>{shop.pet_friendly}</p>
             <p>{shop.wifi}</p>
@@ -95,6 +105,10 @@ class SingleShop extends React.Component {
               latitude={shop.latitude}
               longitude={shop.longitude}
               rating={shop.average_rating}
+              street = {shop.street_1}
+              city = {shop.city}
+              state = {shop.state}
+              zip = {shop.zip}
             />
           </div>
         }

@@ -28,9 +28,9 @@ class AllBeer extends React.Component {
                 <h4>Average Rating: <Rating averageRating={ beer.average_rating } /></h4>
                 <h5 className="addressText">{beer.street_1}</h5>
                 <h5 className="addressText">{beer.street_2}</h5>
-                <h5 className="addressText">{beer.city}</h5>
-                <h5 className="addressText">{beer.state}</h5>
-                <h5 className="addressText">{beer.zip}</h5>
+                <h5 className="addressText">{beer.city}, {beer.state} {beer.zip} </h5>
+                <h5 className="addressText"></h5>
+                <h5 className="addressText"></h5>
                 <br/>
               </Link>
             </div>

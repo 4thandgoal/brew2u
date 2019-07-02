@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
 
+
 class MapContainer extends React.Component {
    constructor(props){
     super(props)
@@ -27,16 +28,36 @@ class MapContainer extends React.Component {
     }
   }
    
-   
+  geocodeAddress = (address) => {
+      const  geocoder = new google.maps.Geocoder()
+      return new Promise((resolve, reject) => {
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            resolve(results[0].geometry.location.toJSON())
+          } else {
+            reject()
+          }
+        })
+      })
+    }
    
   render () {
     const mapStyles = {
       width: "50%",
       height: "50%",
     }
-      
+    const { google, name, latitude, longitude, rating, street, city, state, zip } = this.props
+    const place = `${street}, ${city}, ${state}, ${zip}`
+    
+    // const latLng = []
+    // this.geocodeAddress(address).then(geoco => {
+    //   latLng.push({lat: geoco.lat})
+    //   latLng.push({lng: geoco.lng})
+    // })
+    
+    const location = this.geocodeAddress(place)
 
-    const { google, name, latitude, longitude, rating } = this.props
+    console.log(location)
     
     return (
       <React.Fragment>
@@ -55,7 +76,7 @@ class MapContainer extends React.Component {
             name= {name}
             rating= {`Average rating: ${rating}`}
             title={name}
-            position = {{lat: latitude, lng: longitude}}
+            position = {{ lat: latitude, lng: longitude }}
           />
         
           <InfoWindow
