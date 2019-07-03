@@ -14,6 +14,7 @@ import Thor from "./thor.jpg"
 // added pictures to Components folder instead of routing as images to html.erb file - brute force
 
 class AboutUs extends React.Component {
+    
     render () {
       return (
         <div>

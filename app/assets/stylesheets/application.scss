@@ -570,6 +570,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
     border: 2px solid #333;
 }
 
+#singleReview {
+    text-align: center;
+    border-style: dotted;
+    margin: 6px;
+    padding-top: 5px;
+}
+
+#reviewsContainer {
+    border-style: ridge;
+}
+
 #submitReviewBtn {
     width: max-content;
     padding: 3px;
