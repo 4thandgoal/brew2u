@@ -95,7 +95,7 @@ class SingleShop extends React.Component {
       return reviews.map(review => {
         if (review.establishment_id == shopId)
           return (
-            <div key={review.id}>
+            <div key={review.id} id="singleReview">
               <h3>{review.rating}</h3>
               <p>{review.review}</p>
             </div>
@@ -155,7 +155,7 @@ class SingleShop extends React.Component {
             <div>
                 <h4 className="reviewHeading">Reviews</h4>
                 {checkForReviews.length > 0 &&
-                  <div>
+                  <div id="reviewsContainer">
                     {allReviews()}
                   </div>
                 }
