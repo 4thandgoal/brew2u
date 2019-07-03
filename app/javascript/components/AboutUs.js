@@ -23,7 +23,7 @@ class AboutUs extends React.Component {
               <Row>
                 <Col xs={6} md={4}>
                   <div className="avengerFix">
-                    <img id="matt" src={Matt} height="150 px" width="150 px" style={{'borderRadius':'5px'}} />
+                    <img id="matt" src={Matt} height="200 px" width="200 px" style={{'borderRadius':'5px'}} />
                     <img id="captainamerica" src={CaptainAmerica} />
                   </div>
                   <h5>Matt Au</h5>
@@ -31,7 +31,7 @@ class AboutUs extends React.Component {
                 </Col>
                 <Col xs={6} md={4}>
                   <div className="avengerFix">
-                    <img id="joel" src={Joel} height="150px" width="150px" style={{'borderRadius':'5px'}} />
+                    <img id="joel" src={Joel} height="200 px" width="200 px" style={{'borderRadius':'5px'}} />
                     <img id="ironman" src={IronMan} />
                   </div>
                   <h5>Joel Magsalin</h5>
@@ -39,7 +39,7 @@ class AboutUs extends React.Component {
                 </Col>
                 <Col xs={6} md={4}>
                   <div className="avengerFix">
-                    <img id="gina" src={Gina} height="150px" width="150px" style={{'borderRadius':'5px'}} />
+                    <img id="gina" src={Gina} height="200 px" width="200 px" style={{'borderRadius':'5px'}} />
                     <img id="blackwidow" src={BlackWidow} />
                   </div>
                   <h5>Gina Verrastro</h5>
@@ -47,7 +47,7 @@ class AboutUs extends React.Component {
                 </Col>
                 <Col xs={6} md={4}>
                   <div className="avengerFix">
-                    <img id="mike" src={Mike} height="150px" width="150px" style={{'borderRadius':'5px'}} />
+                    <img id="mike" src={Mike} height="200 px" width="200 px" style={{'borderRadius':'5px'}} />
                     <img id="hulk" src={Hulk} />
                   </div>
                   <h5>Mike Acio</h5>
@@ -55,7 +55,7 @@ class AboutUs extends React.Component {
                 </Col>
                 <Col xs={6} md={4}>
                   <div className="avengerFix">
-                    <img id="sunil" src={Sunil} height="150px" width="150px" style={{'borderRadius':'5px'}} />
+                    <img id="sunil" src={Sunil} height="200 px" width="200 px" style={{'borderRadius':'5px'}} />
                     <img id="thor" src={Thor} />
                   </div>
                   <h5>Sunil Karakkattilrajappan</h5>

@@ -621,10 +621,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
     position: absolute;
     z-index: 1;
     transition: ease-in-out .2s;
+    width: 200px;
+    height: 200px;
 }
 
 .avengerFix {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
