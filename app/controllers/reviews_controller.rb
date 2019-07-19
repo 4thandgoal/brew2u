@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 
-    # before_action :set_review, only: [:show, :edit, :update, :destroy]
+    before_action :set_review, only: [:edit, :update, :destroy]
     before_action :authenticate_user!, except: [:index, :show]
     
     def index
@@ -21,7 +21,12 @@ class ReviewsController < ApplicationController
         end
     end
     
+    def edit
+    end
+    
     def update
+        review.update(review_params)
+        render :index
     end
     
     def destroy

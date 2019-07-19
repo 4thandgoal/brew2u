@@ -44,6 +44,12 @@ class Routes extends Component {
     })
   }
   
+  componentWillMount = () => {
+    return fetch('/reviews.json')
+      .then(resp => resp.json())
+      .then(data => this.setState({ reviews: data }))
+  }
+  
   componentDidMount = () => {
     Promise.all([fetch('/establishments.json'), fetch('/reviews.json')])
       .then(([response1, response2]) => {
@@ -244,6 +250,7 @@ class Routes extends Component {
                 (props)=>
                 <NewReview
                   {...props}
+                  componentWillMount={this.componentWillMount}
                   handleNewReview={this.handleNewReview}
                   reviews={ reviews }
                 />

@@ -22,5 +22,11 @@ class Establishment < ApplicationRecord
       (reviews.sum(&:rating)/reviews.length).round(1)
     end
   end
+  
+  # def url
+  #   link_to website do
+  #     website
+  #   end
+  # end
 
 end
