@@ -31,7 +31,6 @@ class SingleShop extends React.Component {
     const { match } = this.props
     this.state = {
       shopId: match.params.id,
-      reviews: [],
       activeIndex: 0
     }
     this.next = this.next.bind(this);
@@ -43,10 +42,11 @@ class SingleShop extends React.Component {
   
   componentDidUpdate = prevProps => {
     const prevMatch = prevProps.match
-    const { match } = this.props
+    const { componentDidMount, match } = this.props
     if (match.params.id != prevMatch.params.id) {
       this.setState({ shopId: match.params.id })
     }
+    componentDidMount()
   }
   
   onExiting() {
@@ -74,6 +74,20 @@ class SingleShop extends React.Component {
     this.setState({ activeIndex: newIndex });
   }
   
+  allReviews = () => {
+    const { shopId } = this.state
+    const { reviews } = this.props 
+    return reviews.map(review => {
+      if (review.establishment_id == shopId)
+        return (
+          <div key={review.id} id="singleReview">
+            <h3>{review.rating}</h3>
+            <p>{review.review}</p>
+          </div>
+        )
+    })
+  }
+  
   render () {
     const { shopId } = this.state
     const { establishments, reviews, userLoggedIn } = this.props
@@ -91,17 +105,6 @@ class SingleShop extends React.Component {
         </CarouselItem>
       );
     });
-    const allReviews = () => {
-      return reviews.map(review => {
-        if (review.establishment_id == shopId)
-          return (
-            <div key={review.id} id="singleReview">
-              <h3>{review.rating}</h3>
-              <p>{review.review}</p>
-            </div>
-          )
-      })
-    }
     const checkForReviews = []
     reviews.map(review => {
       if (review.establishment_id == shopId) {
@@ -133,7 +136,7 @@ class SingleShop extends React.Component {
               </div>
             
               <div className="detailsWrap">
-                <h4 className="shopWebsite"><a href="{shop.website}" target="_blank">{shop.website}</a></h4>
+                <h4 className="shopWebsite"><a href={`${shop.website}`} target="_blank">{shop.website}</a></h4>
                 <h4 className="shopPhone">{shop.phone}</h4>
                 <h5 className="shopAddress">{shop.street_1}</h5>
                 <h5 className="shopAddress">{shop.street_2}</h5>
@@ -156,7 +159,7 @@ class SingleShop extends React.Component {
                 <h4 className="reviewHeading">Reviews</h4>
                 {checkForReviews.length > 0 &&
                   <div id="reviewsContainer">
-                    {allReviews()}
+                    { this.allReviews() }
                   </div>
                 }
                 {checkForReviews.length == 0 &&

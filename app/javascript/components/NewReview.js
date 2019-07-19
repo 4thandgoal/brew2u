@@ -18,11 +18,6 @@ class NewReview extends React.Component {
     }
   }
   
-  componentDidMount = () => {
-    const { match } = this.props
-    this.setState({ establishment_id: match.params.id })
-  }
-  
   handleChange = (event) => {
     const { attributes } = this.state  
     attributes[event.target.name] = event.target.value
@@ -31,10 +26,11 @@ class NewReview extends React.Component {
   
   handleNewReview = () => {
     const { success } = this.state
-    const { handleNewReview } = this.props
+    const { componentWillMount, handleNewReview } = this.props
     handleNewReview(this.state.attributes)
     let redirect = success === false ? true : false
     this.setState({ success: redirect })
+    componentWillMount()
   }
   
   

@@ -1,6 +1,6 @@
 class EstablishmentsController < ApplicationController
     # protect all establishment routes
-    # before_action :set_establishment, only: [:show, :edit, :update, :destroy]
+    before_action :set_establishment, only: [:show, :edit, :update, :destroy]
     # before_action :authenticate_user!
     
     def index
@@ -21,7 +21,11 @@ class EstablishmentsController < ApplicationController
         end
     end
     
+    def edit
+    end
+    
     def update
+        establishment.update(establishment_params)
     end
     
     def destroy
@@ -29,9 +33,9 @@ class EstablishmentsController < ApplicationController
     
     private
     
-    # def set_establishment
-    #   establishment = Establishment.find(params[:id]) 
-    # end
+    def set_establishment
+      establishment = Establishment.find(params[:id]) 
+    end
     
     def establishment_params
         params.require(:establishment).permit(:company_name, :coffee_or_beer, :phone, :website, :street_1, :street_2, :city, :state, :zip, :hours_of_operation, 
