@@ -50,8 +50,8 @@ class MapContainer extends React.Component {
           zoom={15}
           onClick={this.onMapClicked}
         >
-          <Marker onClick={this.onMarkerClick}
-
+          <Marker
+            onClick={this.onMarkerClick}
             name= {name}
             rating= {`Average rating: ${rating}`}
             title={name}
@@ -63,10 +63,8 @@ class MapContainer extends React.Component {
             visible={this.state.showingInfoWindow}
             maxWidth="180"
           >
-            <div>
-              <h5>{this.state.selectedPlace.name}</h5>
-              <h7>{this.state.selectedPlace.rating}</h7>
-            </div>
+            <h5>{this.state.selectedPlace.name}</h5>
+            <h7>{this.state.selectedPlace.rating}</h7>
           </InfoWindow>
         </Map>
       </React.Fragment>
