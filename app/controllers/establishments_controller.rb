@@ -26,6 +26,7 @@ class EstablishmentsController < ApplicationController
     
     def update
         establishment.update(establishment_params)
+        redirect_to action: "index"
     end
     
     def destroy
