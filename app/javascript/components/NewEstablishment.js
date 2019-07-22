@@ -188,7 +188,7 @@ class NewEstablishment extends React.Component {
         </div>
 
         {success &&
-          <Redirect to={`/all${attributes.coffee_or_beer}`}/>
+          <Redirect to="/" />
         }
       </React.Fragment>
     );
