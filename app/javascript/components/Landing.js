@@ -7,35 +7,36 @@ import {
   CarouselCaption
 } from 'reactstrap';
 
+
 const items = [
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/coffee3.jpg',
-    altText: 'Group of mugs containing different types of coffee',
+    src: 'https://cdn.pixabay.com/photo/2017/06/04/11/00/beer-2370783_1280.jpg',
+    altText: 'A flight of beers',
     caption: ""
   },
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/beer3.jpg',
-    altText: 'Beer being poured from a tap',
+    src: 'https://cdn.pixabay.com/photo/2016/11/19/17/17/beverage-1840426_1280.jpg',
+    altText: 'Busy barista',
     caption: ""
   },
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/coffee2.jpg',
-    altText: 'A mug of coffee seen from above atpo a heart-shaped pile of coffee beans',
+    src: 'https://cdn.pixabay.com/photo/2017/08/28/13/30/beer-2689537_1280.jpg',
+    altText: 'Excellent pour',
     caption: ""
   },
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/beer2.jpg',
-    altText: 'A flight of different types of beer',
+    src: 'https://cdn.pixabay.com/photo/2016/02/19/11/40/coffee-shop-1209863_1280.jpg',
+    altText: 'Ready for the morning rush',
     caption: ""
   },
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/coffee1.jpg',
-    altText: 'A steaming mug of coffee on a pile of coffee beans',
+    src: 'https://cdn.pixabay.com/photo/2016/10/04/05/21/bar-1713610_1280.jpg',
+    altText: 'Ready for business',
     caption: ""
   },
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/06/beer1.jpg',
-    altText: 'Two hands extending to cheers bottles of beer with a sunset in the background',
+    src: 'https://cdn.pixabay.com/photo/2017/08/06/11/25/coffee-2591514_1280.jpg',
+    altText: 'Coffee with waffles',
     caption: ""
   }
 ];
