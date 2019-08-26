@@ -14,12 +14,12 @@ import {
 
 const items = [
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/04/philly.png',
+    src: 'http://www.mikkellersd.com/wp-content/uploads/mikkeller-10.jpg',
     altText: '#',
     caption: ""
   },
   {
-    src: 'https://codecopycoffee.com/wp-content/uploads/2019/04/coffee.png',
+    src: 'https://cdn.shopify.com/s/files/1/1566/6489/t/6/assets/steadystate_inside_1200x.jpg?1374',
     altText: '#',
     caption: ""
   }
@@ -125,6 +125,7 @@ class SingleShop extends React.Component {
             <div className="flexContainer">
             
               <div className="carouselWrap">
+               <div className="carouselItem">
                 <Carousel id="singleCarousel"
                   activeIndex={activeIndex}
                   next={this.next}
@@ -133,6 +134,7 @@ class SingleShop extends React.Component {
                   {slides}
                   <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
                 </Carousel>
+               </div>
               </div>
             
               <div className="detailsWrap">

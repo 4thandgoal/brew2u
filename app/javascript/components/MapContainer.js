@@ -27,7 +27,7 @@ class MapContainer extends React.Component {
     }
   }
    
-   
+
    
   render () {
     const mapStyles = {
