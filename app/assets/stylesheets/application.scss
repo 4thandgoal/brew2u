@@ -459,7 +459,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 10px;
-
+    height: 350px;
 }
 
 .detailsWrap {
@@ -471,11 +471,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', end
 
 .carouselWrap {
     overflow: hidden;
-    background-color: black;
+    // background-color: black;
     align-self: end;
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 2;
+    height: 350px;
+}
+
+.carouselItem img {
+    width: 100%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    height: 100%;
 }
 
 .mapWrap {
