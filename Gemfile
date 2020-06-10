@@ -66,4 +66,4 @@ gem "bootstrap", "~> 4.3"
 
 gem "faker", "~> 1.9"
 
-gem 'geocoder', '~> 1.3', '>= 1.3.7'
+gem 'geocoder', '~> 1.6'
